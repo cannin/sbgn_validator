@@ -39,7 +39,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v6
         with:
-          version: "0.8.17"
+          python-version: "3.14"
       - run: uv run --project tools python tools/verify_rules.py
       - run: uv run --project tools pytest -q tools/test_rules_sync.py
 
@@ -67,7 +67,7 @@ jobs:
           components: rustfmt
       - uses: astral-sh/setup-uv@v6
         with:
-          version: "0.8.17"
+          python-version: "3.14"
       - uses: r-lib/actions/setup-r@v2
         with:
           r-version: release
@@ -100,7 +100,7 @@ jobs:
           toolchain: "1.97"
       - uses: astral-sh/setup-uv@v6
         with:
-          version: "0.8.17"
+          python-version: "3.14"
           enable-cache: true
       - uses: r-lib/actions/setup-r@v2
         with:

@@ -120,6 +120,9 @@ The public upstream repository is
 cross-language normalized-`test` contract; all six backends and packaged
 artifact checks must preserve it.
 
+Both CI and release workflows must provision Python 3.14 explicitly through
+`astral-sh/setup-uv`; hosted runners must not be assumed to provide it.
+
 Keep `VERSION`, all six ecosystem package versions, generated lockfiles, and
 reported backend implementation versions synchronized. The Schematron ruleset
 version is independent and must not be bumped merely for a validator release.
