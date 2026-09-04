@@ -1,0 +1,44 @@
+{
+  "backend": {
+    "implementation": "sbgn-validator-python",
+    "implementation_version": "0.1.0",
+    "language": "python",
+    "native_schematron": true,
+    "profile_version": "libSBGN-Schematron-Profile-1",
+    "schematron_engine": "pyschematron 1.2.1",
+    "xpath_engine": "elementpath",
+    "xpath_version": "5.0.4"
+  },
+  "findings": [
+    {
+      "derived": {
+        "element_id": "a1",
+        "element_kind": "arc"
+      },
+      "diagnostic_references": [
+        {
+          "diagnostic": "id",
+          "text": "a1"
+        },
+        {
+          "diagnostic": "target",
+          "text": "glyph3"
+        },
+        {
+          "diagnostic": "target-class",
+          "text": "simple chemical"
+        }
+      ],
+      "flag": null,
+      "id": "pd10110",
+      "location": "/Q{http://sbgn.org/libsbgn/0.3}sbgn[1]/Q{http://sbgn.org/libsbgn/0.3}map[1]/Q{http://sbgn.org/libsbgn/0.3}arc[3]",
+      "role": "error",
+      "test": "     $target-class='process' or      $target-class='omitted process' or     $target-class='uncertain process' or     $target-class='association' or     $target-class='dissociation' or     $target-class='phenotype'",
+      "text": "Modulation arc must have target reference to PN classes",
+      "type": "failed-assert"
+    }
+  ],
+  "phase": "basic",
+  "schema": "sbgn_pd.sch",
+  "valid": false
+}

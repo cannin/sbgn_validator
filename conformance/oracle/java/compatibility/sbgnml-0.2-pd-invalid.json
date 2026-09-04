@@ -1,0 +1,200 @@
+{
+  "schema" : "sbgn_pd.sch",
+  "phase" : "basic-allow-sbgnml-0.2",
+  "valid" : false,
+  "findings" : [ {
+    "id" : "pd10102",
+    "type" : "failed-assert",
+    "role" : "error",
+    "flag" : null,
+    "location" : "/Q{http://sbgn.org/libsbgn/0.2}sbgn[1]/Q{http://sbgn.org/libsbgn/0.2}map[1]/Q{http://sbgn.org/libsbgn/0.2}arc[1]",
+    "test" : "     $port-class='process' or      $port-class='omitted process' or     $port-class='uncertain process' or     $port-class='association' or     $port-class='dissociation' or     $port-class='phenotype'",
+    "text" : "Arc with class consumption must have target reference to port on glyph with PN classes",
+    "diagnostic_references" : [ {
+      "diagnostic" : "id",
+      "text" : "arc_banf1_substrate"
+    }, {
+      "diagnostic" : "target",
+      "text" : "process_fake_dephosphorylation"
+    }, {
+      "diagnostic" : "port-class",
+      "text" : ""
+    } ],
+    "derived" : {
+      "element_id" : "arc_banf1_substrate",
+      "element_kind" : "arc"
+    }
+  }, {
+    "id" : "pd10102",
+    "type" : "failed-assert",
+    "role" : "error",
+    "flag" : null,
+    "location" : "/Q{http://sbgn.org/libsbgn/0.2}sbgn[1]/Q{http://sbgn.org/libsbgn/0.2}map[1]/Q{http://sbgn.org/libsbgn/0.2}arc[3]",
+    "test" : "     $port-class='process' or      $port-class='omitted process' or     $port-class='uncertain process' or     $port-class='association' or     $port-class='dissociation' or     $port-class='phenotype'",
+    "text" : "Arc with class consumption must have target reference to port on glyph with PN classes",
+    "diagnostic_references" : [ {
+      "diagnostic" : "id",
+      "text" : "arc_lmnb1_substrate"
+    }, {
+      "diagnostic" : "target",
+      "text" : "process_fake_phosphorylation"
+    }, {
+      "diagnostic" : "port-class",
+      "text" : ""
+    } ],
+    "derived" : {
+      "element_id" : "arc_lmnb1_substrate",
+      "element_kind" : "arc"
+    }
+  }, {
+    "id" : "pd10132",
+    "type" : "failed-assert",
+    "role" : "error",
+    "flag" : null,
+    "location" : "/Q{http://sbgn.org/libsbgn/0.2}sbgn[1]/Q{http://sbgn.org/libsbgn/0.2}map[1]/Q{http://sbgn.org/libsbgn/0.2}glyph[4]",
+    "test" : "$port-count = 2",
+    "text" : "All process nodes (with the exception of phenotype) must have a LHS and RHS.",
+    "diagnostic_references" : [ {
+      "diagnostic" : "id",
+      "text" : "process_fake_dephosphorylation"
+    } ],
+    "derived" : {
+      "element_id" : "process_fake_dephosphorylation",
+      "element_kind" : "glyph"
+    }
+  }, {
+    "id" : "pd10132",
+    "type" : "failed-assert",
+    "role" : "error",
+    "flag" : null,
+    "location" : "/Q{http://sbgn.org/libsbgn/0.2}sbgn[1]/Q{http://sbgn.org/libsbgn/0.2}map[1]/Q{http://sbgn.org/libsbgn/0.2}glyph[7]",
+    "test" : "$port-count = 2",
+    "text" : "All process nodes (with the exception of phenotype) must have a LHS and RHS.",
+    "diagnostic_references" : [ {
+      "diagnostic" : "id",
+      "text" : "process_fake_phosphorylation"
+    } ],
+    "derived" : {
+      "element_id" : "process_fake_phosphorylation",
+      "element_kind" : "glyph"
+    }
+  }, {
+    "id" : "pd10132",
+    "type" : "failed-assert",
+    "role" : "error",
+    "flag" : null,
+    "location" : "/Q{http://sbgn.org/libsbgn/0.2}sbgn[1]/Q{http://sbgn.org/libsbgn/0.2}map[1]/Q{http://sbgn.org/libsbgn/0.2}glyph[11]",
+    "test" : "$port-count = 2",
+    "text" : "All process nodes (with the exception of phenotype) must have a LHS and RHS.",
+    "diagnostic_references" : [ {
+      "diagnostic" : "id",
+      "text" : "process_supported_methylation"
+    } ],
+    "derived" : {
+      "element_id" : "process_supported_methylation",
+      "element_kind" : "glyph"
+    }
+  }, {
+    "id" : "pd10132",
+    "type" : "failed-assert",
+    "role" : "error",
+    "flag" : null,
+    "location" : "/Q{http://sbgn.org/libsbgn/0.2}sbgn[1]/Q{http://sbgn.org/libsbgn/0.2}map[1]/Q{http://sbgn.org/libsbgn/0.2}glyph[9]",
+    "test" : "$port-count = 2",
+    "text" : "All process nodes (with the exception of phenotype) must have a LHS and RHS.",
+    "diagnostic_references" : [ {
+      "diagnostic" : "id",
+      "text" : "process_supported_phosphorylation"
+    } ],
+    "derived" : {
+      "element_id" : "process_supported_phosphorylation",
+      "element_kind" : "glyph"
+    }
+  }, {
+    "id" : "pd10141",
+    "type" : "failed-assert",
+    "role" : "error",
+    "flag" : null,
+    "location" : "/Q{http://sbgn.org/libsbgn/0.2}sbgn[1]/Q{http://sbgn.org/libsbgn/0.2}map[1]/Q{http://sbgn.org/libsbgn/0.2}glyph[4]",
+    "test" : "($count >= 2)",
+    "text" : "All process nodes should have at least one input and at least one ouput pointing to the arcs",
+    "diagnostic_references" : [ {
+      "diagnostic" : "id",
+      "text" : "process_fake_dephosphorylation"
+    }, {
+      "diagnostic" : "count",
+      "text" : "0"
+    } ],
+    "derived" : {
+      "element_id" : "process_fake_dephosphorylation",
+      "element_kind" : "glyph"
+    }
+  }, {
+    "id" : "pd10141",
+    "type" : "failed-assert",
+    "role" : "error",
+    "flag" : null,
+    "location" : "/Q{http://sbgn.org/libsbgn/0.2}sbgn[1]/Q{http://sbgn.org/libsbgn/0.2}map[1]/Q{http://sbgn.org/libsbgn/0.2}glyph[7]",
+    "test" : "($count >= 2)",
+    "text" : "All process nodes should have at least one input and at least one ouput pointing to the arcs",
+    "diagnostic_references" : [ {
+      "diagnostic" : "id",
+      "text" : "process_fake_phosphorylation"
+    }, {
+      "diagnostic" : "count",
+      "text" : "0"
+    } ],
+    "derived" : {
+      "element_id" : "process_fake_phosphorylation",
+      "element_kind" : "glyph"
+    }
+  }, {
+    "id" : "pd10141",
+    "type" : "failed-assert",
+    "role" : "error",
+    "flag" : null,
+    "location" : "/Q{http://sbgn.org/libsbgn/0.2}sbgn[1]/Q{http://sbgn.org/libsbgn/0.2}map[1]/Q{http://sbgn.org/libsbgn/0.2}glyph[11]",
+    "test" : "($count >= 2)",
+    "text" : "All process nodes should have at least one input and at least one ouput pointing to the arcs",
+    "diagnostic_references" : [ {
+      "diagnostic" : "id",
+      "text" : "process_supported_methylation"
+    }, {
+      "diagnostic" : "count",
+      "text" : "0"
+    } ],
+    "derived" : {
+      "element_id" : "process_supported_methylation",
+      "element_kind" : "glyph"
+    }
+  }, {
+    "id" : "pd10141",
+    "type" : "failed-assert",
+    "role" : "error",
+    "flag" : null,
+    "location" : "/Q{http://sbgn.org/libsbgn/0.2}sbgn[1]/Q{http://sbgn.org/libsbgn/0.2}map[1]/Q{http://sbgn.org/libsbgn/0.2}glyph[9]",
+    "test" : "($count >= 2)",
+    "text" : "All process nodes should have at least one input and at least one ouput pointing to the arcs",
+    "diagnostic_references" : [ {
+      "diagnostic" : "id",
+      "text" : "process_supported_phosphorylation"
+    }, {
+      "diagnostic" : "count",
+      "text" : "0"
+    } ],
+    "derived" : {
+      "element_id" : "process_supported_phosphorylation",
+      "element_kind" : "glyph"
+    }
+  } ],
+  "backend" : {
+    "language" : "java",
+    "implementation" : "sbgn-validator-java",
+    "implementation_version" : "0.1.0",
+    "schematron_engine" : "ph-schematron-schxslt2 10.0.1 / SchXslt2",
+    "xpath_engine" : "Saxon-HE",
+    "xpath_version" : "12.10",
+    "native_schematron" : true,
+    "profile_version" : "libSBGN-Schematron-Profile-1"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "schema" : "sbgn_pd.sch",
+  "phase" : "basic",
+  "valid" : false,
+  "findings" : [ {
+    "id" : "sbgn-namespace-0.3",
+    "type" : "failed-assert",
+    "role" : "error",
+    "flag" : null,
+    "location" : "/Q{http://sbgn.org/libsbgn/0.2}sbgn[1]",
+    "test" : "namespace-uri() = 'http://sbgn.org/libsbgn/0.3'",
+    "text" : "SBGN namespace must be http://sbgn.org/libsbgn/0.3; found http://sbgn.org/libsbgn/0.2.",
+    "diagnostic_references" : [ ],
+    "derived" : {
+      "element_id" : null,
+      "element_kind" : "sbgn"
+    }
+  } ],
+  "backend" : {
+    "language" : "java",
+    "implementation" : "sbgn-validator-java",
+    "implementation_version" : "0.1.0",
+    "schematron_engine" : "ph-schematron-schxslt2 10.0.1 / SchXslt2",
+    "xpath_engine" : "Saxon-HE",
+    "xpath_version" : "12.10",
+    "native_schematron" : true,
+    "profile_version" : "libSBGN-Schematron-Profile-1"
+  }
+}

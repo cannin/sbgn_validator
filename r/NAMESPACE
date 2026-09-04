@@ -1,0 +1,7 @@
+useDynLib(sbgnvalidator, .registration = TRUE)
+importFrom(Rcpp, evalCpp)
+importFrom(jsonlite, toJSON)
+export(schematron_compile)
+export(schematron_validate)
+export(rules_info)
+export(validate_sbgn)

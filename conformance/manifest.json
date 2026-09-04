@@ -1,0 +1,858 @@
+{
+  "cases": [
+    {
+      "id": "af10101-fail",
+      "input": "tests/fixtures/error-test-files/AF/af10101-fail.sbgn",
+      "language": "AF",
+      "oracle": "conformance/oracle/java/af/af10101-fail.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_af.sch"
+    },
+    {
+      "id": "af10101-pass",
+      "input": "tests/fixtures/error-test-files/AF/af10101-pass.sbgn",
+      "language": "AF",
+      "oracle": "conformance/oracle/java/af/af10101-pass.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_af.sch"
+    },
+    {
+      "id": "af10102-fail-1",
+      "input": "tests/fixtures/error-test-files/AF/af10102-fail-1.sbgn",
+      "language": "AF",
+      "oracle": "conformance/oracle/java/af/af10102-fail-1.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_af.sch"
+    },
+    {
+      "id": "af10102-fail-2",
+      "input": "tests/fixtures/error-test-files/AF/af10102-fail-2.sbgn",
+      "language": "AF",
+      "oracle": "conformance/oracle/java/af/af10102-fail-2.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_af.sch"
+    },
+    {
+      "id": "af10102-fail-3",
+      "input": "tests/fixtures/error-test-files/AF/af10102-fail-3.sbgn",
+      "language": "AF",
+      "oracle": "conformance/oracle/java/af/af10102-fail-3.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_af.sch"
+    },
+    {
+      "id": "af10102-fail-4",
+      "input": "tests/fixtures/error-test-files/AF/af10102-fail-4.sbgn",
+      "language": "AF",
+      "oracle": "conformance/oracle/java/af/af10102-fail-4.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_af.sch"
+    },
+    {
+      "id": "af10102-pass",
+      "input": "tests/fixtures/error-test-files/AF/af10102-pass.sbgn",
+      "language": "AF",
+      "oracle": "conformance/oracle/java/af/af10102-pass.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_af.sch"
+    },
+    {
+      "id": "af10103-fail",
+      "input": "tests/fixtures/error-test-files/AF/af10103-fail.sbgn",
+      "language": "AF",
+      "oracle": "conformance/oracle/java/af/af10103-fail.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_af.sch"
+    },
+    {
+      "id": "af10103-pass",
+      "input": "tests/fixtures/error-test-files/AF/af10103-pass.sbgn",
+      "language": "AF",
+      "oracle": "conformance/oracle/java/af/af10103-pass.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_af.sch"
+    },
+    {
+      "id": "af10104-fail",
+      "input": "tests/fixtures/error-test-files/AF/af10104-fail.sbgn",
+      "language": "AF",
+      "oracle": "conformance/oracle/java/af/af10104-fail.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_af.sch"
+    },
+    {
+      "id": "af10104-pass",
+      "input": "tests/fixtures/error-test-files/AF/af10104-pass.sbgn",
+      "language": "AF",
+      "oracle": "conformance/oracle/java/af/af10104-pass.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_af.sch"
+    },
+    {
+      "id": "af10109-fail",
+      "input": "tests/fixtures/error-test-files/AF/af10109-fail.sbgn",
+      "language": "AF",
+      "oracle": "conformance/oracle/java/af/af10109-fail.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_af.sch"
+    },
+    {
+      "id": "af10109-pass",
+      "input": "tests/fixtures/error-test-files/AF/af10109-pass.sbgn",
+      "language": "AF",
+      "oracle": "conformance/oracle/java/af/af10109-pass.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_af.sch"
+    },
+    {
+      "id": "af10110-fail",
+      "input": "tests/fixtures/error-test-files/AF/af10110-fail.sbgn",
+      "language": "AF",
+      "oracle": "conformance/oracle/java/af/af10110-fail.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_af.sch"
+    },
+    {
+      "id": "af10111-fail",
+      "input": "tests/fixtures/error-test-files/AF/af10111-fail.sbgn",
+      "language": "AF",
+      "oracle": "conformance/oracle/java/af/af10111-fail.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_af.sch"
+    },
+    {
+      "id": "af10111-pass",
+      "input": "tests/fixtures/error-test-files/AF/af10111-pass.sbgn",
+      "language": "AF",
+      "oracle": "conformance/oracle/java/af/af10111-pass.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_af.sch"
+    },
+    {
+      "id": "af10112-fail",
+      "input": "tests/fixtures/error-test-files/AF/af10112-fail.sbgn",
+      "language": "AF",
+      "oracle": "conformance/oracle/java/af/af10112-fail.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_af.sch"
+    },
+    {
+      "id": "af10113-fail",
+      "input": "tests/fixtures/error-test-files/AF/af10113-fail.sbgn",
+      "language": "AF",
+      "oracle": "conformance/oracle/java/af/af10113-fail.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_af.sch"
+    },
+    {
+      "id": "er10103-fail",
+      "input": "tests/fixtures/error-test-files/ER/er10103-fail.sbgn",
+      "language": "ER",
+      "oracle": "conformance/oracle/java/er/er10103-fail.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_er.sch"
+    },
+    {
+      "id": "er10103-pass",
+      "input": "tests/fixtures/error-test-files/ER/er10103-pass.sbgn",
+      "language": "ER",
+      "oracle": "conformance/oracle/java/er/er10103-pass.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_er.sch"
+    },
+    {
+      "id": "er10104-fail",
+      "input": "tests/fixtures/error-test-files/ER/er10104-fail.sbgn",
+      "language": "ER",
+      "oracle": "conformance/oracle/java/er/er10104-fail.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_er.sch"
+    },
+    {
+      "id": "er10104-pass",
+      "input": "tests/fixtures/error-test-files/ER/er10104-pass.sbgn",
+      "language": "ER",
+      "oracle": "conformance/oracle/java/er/er10104-pass.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_er.sch"
+    },
+    {
+      "id": "er10106-fail-1",
+      "input": "tests/fixtures/error-test-files/ER/er10106-fail-1.sbgn",
+      "language": "ER",
+      "oracle": "conformance/oracle/java/er/er10106-fail-1.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_er.sch"
+    },
+    {
+      "id": "er10106-fail-2",
+      "input": "tests/fixtures/error-test-files/ER/er10106-fail-2.sbgn",
+      "language": "ER",
+      "oracle": "conformance/oracle/java/er/er10106-fail-2.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_er.sch"
+    },
+    {
+      "id": "er10106-fail-3",
+      "input": "tests/fixtures/error-test-files/ER/er10106-fail-3.sbgn",
+      "language": "ER",
+      "oracle": "conformance/oracle/java/er/er10106-fail-3.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_er.sch"
+    },
+    {
+      "id": "er10106-fail-4",
+      "input": "tests/fixtures/error-test-files/ER/er10106-fail-4.sbgn",
+      "language": "ER",
+      "oracle": "conformance/oracle/java/er/er10106-fail-4.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_er.sch"
+    },
+    {
+      "id": "er10106-fail-5",
+      "input": "tests/fixtures/error-test-files/ER/er10106-fail-5.sbgn",
+      "language": "ER",
+      "oracle": "conformance/oracle/java/er/er10106-fail-5.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_er.sch"
+    },
+    {
+      "id": "er10106-fail-6",
+      "input": "tests/fixtures/error-test-files/ER/er10106-fail-6.sbgn",
+      "language": "ER",
+      "oracle": "conformance/oracle/java/er/er10106-fail-6.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_er.sch"
+    },
+    {
+      "id": "er10106-pass",
+      "input": "tests/fixtures/error-test-files/ER/er10106-pass.sbgn",
+      "language": "ER",
+      "oracle": "conformance/oracle/java/er/er10106-pass.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_er.sch"
+    },
+    {
+      "id": "er10107-fail-1",
+      "input": "tests/fixtures/error-test-files/ER/er10107-fail-1.sbgn",
+      "language": "ER",
+      "oracle": "conformance/oracle/java/er/er10107-fail-1.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_er.sch"
+    },
+    {
+      "id": "er10107-fail-2",
+      "input": "tests/fixtures/error-test-files/ER/er10107-fail-2.sbgn",
+      "language": "ER",
+      "oracle": "conformance/oracle/java/er/er10107-fail-2.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_er.sch"
+    },
+    {
+      "id": "er10107-fail-3",
+      "input": "tests/fixtures/error-test-files/ER/er10107-fail-3.sbgn",
+      "language": "ER",
+      "oracle": "conformance/oracle/java/er/er10107-fail-3.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_er.sch"
+    },
+    {
+      "id": "er10107-fail-4",
+      "input": "tests/fixtures/error-test-files/ER/er10107-fail-4.sbgn",
+      "language": "ER",
+      "oracle": "conformance/oracle/java/er/er10107-fail-4.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_er.sch"
+    },
+    {
+      "id": "er10107-fail-5",
+      "input": "tests/fixtures/error-test-files/ER/er10107-fail-5.sbgn",
+      "language": "ER",
+      "oracle": "conformance/oracle/java/er/er10107-fail-5.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_er.sch"
+    },
+    {
+      "id": "er10107-fail-6",
+      "input": "tests/fixtures/error-test-files/ER/er10107-fail-6.sbgn",
+      "language": "ER",
+      "oracle": "conformance/oracle/java/er/er10107-fail-6.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_er.sch"
+    },
+    {
+      "id": "er10107-pass",
+      "input": "tests/fixtures/error-test-files/ER/er10107-pass.sbgn",
+      "language": "ER",
+      "oracle": "conformance/oracle/java/er/er10107-pass.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_er.sch"
+    },
+    {
+      "id": "er10108-fail-1",
+      "input": "tests/fixtures/error-test-files/ER/er10108-fail-1.sbgn",
+      "language": "ER",
+      "oracle": "conformance/oracle/java/er/er10108-fail-1.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_er.sch"
+    },
+    {
+      "id": "er10108-fail-2",
+      "input": "tests/fixtures/error-test-files/ER/er10108-fail-2.sbgn",
+      "language": "ER",
+      "oracle": "conformance/oracle/java/er/er10108-fail-2.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_er.sch"
+    },
+    {
+      "id": "er10108-pass",
+      "input": "tests/fixtures/error-test-files/ER/er10108-pass.sbgn",
+      "language": "ER",
+      "oracle": "conformance/oracle/java/er/er10108-pass.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_er.sch"
+    },
+    {
+      "id": "er10109-fail",
+      "input": "tests/fixtures/error-test-files/ER/er10109-fail.sbgn",
+      "language": "ER",
+      "oracle": "conformance/oracle/java/er/er10109-fail.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_er.sch"
+    },
+    {
+      "id": "er10109-pass",
+      "input": "tests/fixtures/error-test-files/ER/er10109-pass.sbgn",
+      "language": "ER",
+      "oracle": "conformance/oracle/java/er/er10109-pass.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_er.sch"
+    },
+    {
+      "id": "er10111-fail",
+      "input": "tests/fixtures/error-test-files/ER/er10111-fail.sbgn",
+      "language": "ER",
+      "oracle": "conformance/oracle/java/er/er10111-fail.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_er.sch"
+    },
+    {
+      "id": "er10111-pass",
+      "input": "tests/fixtures/error-test-files/ER/er10111-pass.sbgn",
+      "language": "ER",
+      "oracle": "conformance/oracle/java/er/er10111-pass.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_er.sch"
+    },
+    {
+      "id": "er20001-fail",
+      "input": "tests/fixtures/error-test-files/ER/er20001-fail.sbgn",
+      "language": "ER",
+      "oracle": "conformance/oracle/java/er/er20001-fail.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_er.sch"
+    },
+    {
+      "id": "er20001-pass",
+      "input": "tests/fixtures/error-test-files/ER/er20001-pass.sbgn",
+      "language": "ER",
+      "oracle": "conformance/oracle/java/er/er20001-pass.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_er.sch"
+    },
+    {
+      "id": "pd10101-fail",
+      "input": "tests/fixtures/error-test-files/PD/pd10101-fail.sbgn",
+      "language": "PD",
+      "oracle": "conformance/oracle/java/pd/pd10101-fail.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_pd.sch"
+    },
+    {
+      "id": "pd10101-pass",
+      "input": "tests/fixtures/error-test-files/PD/pd10101-pass.sbgn",
+      "language": "PD",
+      "oracle": "conformance/oracle/java/pd/pd10101-pass.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_pd.sch"
+    },
+    {
+      "id": "pd10102-fail",
+      "input": "tests/fixtures/error-test-files/PD/pd10102-fail.sbgn",
+      "language": "PD",
+      "oracle": "conformance/oracle/java/pd/pd10102-fail.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_pd.sch"
+    },
+    {
+      "id": "pd10102-pass",
+      "input": "tests/fixtures/error-test-files/PD/pd10102-pass.sbgn",
+      "language": "PD",
+      "oracle": "conformance/oracle/java/pd/pd10102-pass.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_pd.sch"
+    },
+    {
+      "id": "pd10103-fail",
+      "input": "tests/fixtures/error-test-files/PD/pd10103-fail.sbgn",
+      "language": "PD",
+      "oracle": "conformance/oracle/java/pd/pd10103-fail.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_pd.sch"
+    },
+    {
+      "id": "pd10103-pass",
+      "input": "tests/fixtures/error-test-files/PD/pd10103-pass.sbgn",
+      "language": "PD",
+      "oracle": "conformance/oracle/java/pd/pd10103-pass.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_pd.sch"
+    },
+    {
+      "id": "pd10104-fail",
+      "input": "tests/fixtures/error-test-files/PD/pd10104-fail.sbgn",
+      "language": "PD",
+      "oracle": "conformance/oracle/java/pd/pd10104-fail.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_pd.sch"
+    },
+    {
+      "id": "pd10104-pass",
+      "input": "tests/fixtures/error-test-files/PD/pd10104-pass.sbgn",
+      "language": "PD",
+      "oracle": "conformance/oracle/java/pd/pd10104-pass.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_pd.sch"
+    },
+    {
+      "id": "pd10105-fail",
+      "input": "tests/fixtures/error-test-files/PD/pd10105-fail.sbgn",
+      "language": "PD",
+      "oracle": "conformance/oracle/java/pd/pd10105-fail.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_pd.sch"
+    },
+    {
+      "id": "pd10105-pass",
+      "input": "tests/fixtures/error-test-files/PD/pd10105-pass.sbgn",
+      "language": "PD",
+      "oracle": "conformance/oracle/java/pd/pd10105-pass.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_pd.sch"
+    },
+    {
+      "id": "pd10106-fail",
+      "input": "tests/fixtures/error-test-files/PD/pd10106-fail.sbgn",
+      "language": "PD",
+      "oracle": "conformance/oracle/java/pd/pd10106-fail.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_pd.sch"
+    },
+    {
+      "id": "pd10106-pass",
+      "input": "tests/fixtures/error-test-files/PD/pd10106-pass.sbgn",
+      "language": "PD",
+      "oracle": "conformance/oracle/java/pd/pd10106-pass.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_pd.sch"
+    },
+    {
+      "id": "pd10107-fail",
+      "input": "tests/fixtures/error-test-files/PD/pd10107-fail.sbgn",
+      "language": "PD",
+      "oracle": "conformance/oracle/java/pd/pd10107-fail.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_pd.sch"
+    },
+    {
+      "id": "pd10107-pass",
+      "input": "tests/fixtures/error-test-files/PD/pd10107-pass.sbgn",
+      "language": "PD",
+      "oracle": "conformance/oracle/java/pd/pd10107-pass.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_pd.sch"
+    },
+    {
+      "id": "pd10108-fail",
+      "input": "tests/fixtures/error-test-files/PD/pd10108-fail.sbgn",
+      "language": "PD",
+      "oracle": "conformance/oracle/java/pd/pd10108-fail.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_pd.sch"
+    },
+    {
+      "id": "pd10108-pass",
+      "input": "tests/fixtures/error-test-files/PD/pd10108-pass.sbgn",
+      "language": "PD",
+      "oracle": "conformance/oracle/java/pd/pd10108-pass.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_pd.sch"
+    },
+    {
+      "id": "pd10109-fail-1",
+      "input": "tests/fixtures/error-test-files/PD/pd10109-fail-1.sbgn",
+      "language": "PD",
+      "oracle": "conformance/oracle/java/pd/pd10109-fail-1.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_pd.sch"
+    },
+    {
+      "id": "pd10109-fail-2",
+      "input": "tests/fixtures/error-test-files/PD/pd10109-fail-2.sbgn",
+      "language": "PD",
+      "oracle": "conformance/oracle/java/pd/pd10109-fail-2.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_pd.sch"
+    },
+    {
+      "id": "pd10109-fail-3",
+      "input": "tests/fixtures/error-test-files/PD/pd10109-fail-3.sbgn",
+      "language": "PD",
+      "oracle": "conformance/oracle/java/pd/pd10109-fail-3.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_pd.sch"
+    },
+    {
+      "id": "pd10109-fail-4",
+      "input": "tests/fixtures/error-test-files/PD/pd10109-fail-4.sbgn",
+      "language": "PD",
+      "oracle": "conformance/oracle/java/pd/pd10109-fail-4.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_pd.sch"
+    },
+    {
+      "id": "pd10109-fail-5",
+      "input": "tests/fixtures/error-test-files/PD/pd10109-fail-5.sbgn",
+      "language": "PD",
+      "oracle": "conformance/oracle/java/pd/pd10109-fail-5.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_pd.sch"
+    },
+    {
+      "id": "pd10109-pass",
+      "input": "tests/fixtures/error-test-files/PD/pd10109-pass.sbgn",
+      "language": "PD",
+      "oracle": "conformance/oracle/java/pd/pd10109-pass.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_pd.sch"
+    },
+    {
+      "id": "pd10110-fail-1",
+      "input": "tests/fixtures/error-test-files/PD/pd10110-fail-1.sbgn",
+      "language": "PD",
+      "oracle": "conformance/oracle/java/pd/pd10110-fail-1.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_pd.sch"
+    },
+    {
+      "id": "pd10110-fail-2",
+      "input": "tests/fixtures/error-test-files/PD/pd10110-fail-2.sbgn",
+      "language": "PD",
+      "oracle": "conformance/oracle/java/pd/pd10110-fail-2.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_pd.sch"
+    },
+    {
+      "id": "pd10110-fail-3",
+      "input": "tests/fixtures/error-test-files/PD/pd10110-fail-3.sbgn",
+      "language": "PD",
+      "oracle": "conformance/oracle/java/pd/pd10110-fail-3.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_pd.sch"
+    },
+    {
+      "id": "pd10110-fail-4",
+      "input": "tests/fixtures/error-test-files/PD/pd10110-fail-4.sbgn",
+      "language": "PD",
+      "oracle": "conformance/oracle/java/pd/pd10110-fail-4.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_pd.sch"
+    },
+    {
+      "id": "pd10110-fail-5",
+      "input": "tests/fixtures/error-test-files/PD/pd10110-fail-5.sbgn",
+      "language": "PD",
+      "oracle": "conformance/oracle/java/pd/pd10110-fail-5.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_pd.sch"
+    },
+    {
+      "id": "pd10110-pass",
+      "input": "tests/fixtures/error-test-files/PD/pd10110-pass.sbgn",
+      "language": "PD",
+      "oracle": "conformance/oracle/java/pd/pd10110-pass.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_pd.sch"
+    },
+    {
+      "id": "pd10111-fail-2",
+      "input": "tests/fixtures/error-test-files/PD/pd10111-fail-2.sbgn",
+      "language": "PD",
+      "oracle": "conformance/oracle/java/pd/pd10111-fail-2.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_pd.sch"
+    },
+    {
+      "id": "pd10111-fail",
+      "input": "tests/fixtures/error-test-files/PD/pd10111-fail.sbgn",
+      "language": "PD",
+      "oracle": "conformance/oracle/java/pd/pd10111-fail.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_pd.sch"
+    },
+    {
+      "id": "pd10111-pass",
+      "input": "tests/fixtures/error-test-files/PD/pd10111-pass.sbgn",
+      "language": "PD",
+      "oracle": "conformance/oracle/java/pd/pd10111-pass.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_pd.sch"
+    },
+    {
+      "id": "pd10112-fail-1",
+      "input": "tests/fixtures/error-test-files/PD/pd10112-fail-1.sbgn",
+      "language": "PD",
+      "oracle": "conformance/oracle/java/pd/pd10112-fail-1.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_pd.sch"
+    },
+    {
+      "id": "pd10112-fail-2",
+      "input": "tests/fixtures/error-test-files/PD/pd10112-fail-2.sbgn",
+      "language": "PD",
+      "oracle": "conformance/oracle/java/pd/pd10112-fail-2.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_pd.sch"
+    },
+    {
+      "id": "pd10112-pass",
+      "input": "tests/fixtures/error-test-files/PD/pd10112-pass.sbgn",
+      "language": "PD",
+      "oracle": "conformance/oracle/java/pd/pd10112-pass.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_pd.sch"
+    },
+    {
+      "id": "pd10124-fail",
+      "input": "tests/fixtures/error-test-files/PD/pd10124-fail.sbgn",
+      "language": "PD",
+      "oracle": "conformance/oracle/java/pd/pd10124-fail.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_pd.sch"
+    },
+    {
+      "id": "pd10124-pass",
+      "input": "tests/fixtures/error-test-files/PD/pd10124-pass.sbgn",
+      "language": "PD",
+      "oracle": "conformance/oracle/java/pd/pd10124-pass.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_pd.sch"
+    },
+    {
+      "id": "pd10125-fail",
+      "input": "tests/fixtures/error-test-files/PD/pd10125-fail.sbgn",
+      "language": "PD",
+      "oracle": "conformance/oracle/java/pd/pd10125-fail.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_pd.sch"
+    },
+    {
+      "id": "pd10126-fail",
+      "input": "tests/fixtures/error-test-files/PD/pd10126-fail.sbgn",
+      "language": "PD",
+      "oracle": "conformance/oracle/java/pd/pd10126-fail.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_pd.sch"
+    },
+    {
+      "id": "pd10126-pass",
+      "input": "tests/fixtures/error-test-files/PD/pd10126-pass.sbgn",
+      "language": "PD",
+      "oracle": "conformance/oracle/java/pd/pd10126-pass.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_pd.sch"
+    },
+    {
+      "id": "pd10127-fail",
+      "input": "tests/fixtures/error-test-files/PD/pd10127-fail.sbgn",
+      "language": "PD",
+      "oracle": "conformance/oracle/java/pd/pd10127-fail.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_pd.sch"
+    },
+    {
+      "id": "pd10127-pass",
+      "input": "tests/fixtures/error-test-files/PD/pd10127-pass.sbgn",
+      "language": "PD",
+      "oracle": "conformance/oracle/java/pd/pd10127-pass.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_pd.sch"
+    },
+    {
+      "id": "pd10128-fail",
+      "input": "tests/fixtures/error-test-files/PD/pd10128-fail.sbgn",
+      "language": "PD",
+      "oracle": "conformance/oracle/java/pd/pd10128-fail.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_pd.sch"
+    },
+    {
+      "id": "pd10128-pass",
+      "input": "tests/fixtures/error-test-files/PD/pd10128-pass.sbgn",
+      "language": "PD",
+      "oracle": "conformance/oracle/java/pd/pd10128-pass.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_pd.sch"
+    },
+    {
+      "id": "pd10131-fail",
+      "input": "tests/fixtures/error-test-files/PD/pd10131-fail.sbgn",
+      "language": "PD",
+      "oracle": "conformance/oracle/java/pd/pd10131-fail.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_pd.sch"
+    },
+    {
+      "id": "pd10131-pass",
+      "input": "tests/fixtures/error-test-files/PD/pd10131-pass.sbgn",
+      "language": "PD",
+      "oracle": "conformance/oracle/java/pd/pd10131-pass.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_pd.sch"
+    },
+    {
+      "id": "pd10132-fail",
+      "input": "tests/fixtures/error-test-files/PD/pd10132-fail.sbgn",
+      "language": "PD",
+      "oracle": "conformance/oracle/java/pd/pd10132-fail.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_pd.sch"
+    },
+    {
+      "id": "pd10132-pass",
+      "input": "tests/fixtures/error-test-files/PD/pd10132-pass.sbgn",
+      "language": "PD",
+      "oracle": "conformance/oracle/java/pd/pd10132-pass.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_pd.sch"
+    },
+    {
+      "id": "pd10140-fail",
+      "input": "tests/fixtures/error-test-files/PD/pd10140-fail.sbgn",
+      "language": "PD",
+      "oracle": "conformance/oracle/java/pd/pd10140-fail.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_pd.sch"
+    },
+    {
+      "id": "pd10140-pass",
+      "input": "tests/fixtures/error-test-files/PD/pd10140-pass.sbgn",
+      "language": "PD",
+      "oracle": "conformance/oracle/java/pd/pd10140-pass.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_pd.sch"
+    },
+    {
+      "id": "pd10141-fail",
+      "input": "tests/fixtures/error-test-files/PD/pd10141-fail.sbgn",
+      "language": "PD",
+      "oracle": "conformance/oracle/java/pd/pd10141-fail.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_pd.sch"
+    },
+    {
+      "id": "pd10141-pass",
+      "input": "tests/fixtures/error-test-files/PD/pd10141-pass.sbgn",
+      "language": "PD",
+      "oracle": "conformance/oracle/java/pd/pd10141-pass.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_pd.sch"
+    },
+    {
+      "id": "pd10142-fail",
+      "input": "tests/fixtures/error-test-files/PD/pd10142-fail.sbgn",
+      "language": "PD",
+      "oracle": "conformance/oracle/java/pd/pd10142-fail.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_pd.sch"
+    },
+    {
+      "id": "pd10142-pass",
+      "input": "tests/fixtures/error-test-files/PD/pd10142-pass.sbgn",
+      "language": "PD",
+      "oracle": "conformance/oracle/java/pd/pd10142-pass.json",
+      "phase": "basic",
+      "schema": "validation/rules/sbgn_pd.sch"
+    },
+    {
+      "id": "profile-namespace-mismatch",
+      "input": "tests/examples/go_mf_conflicts.sbgn",
+      "language": "PD",
+      "oracle": "conformance/oracle/java/profile/namespace-mismatch.json",
+      "phase": "basic",
+      "profile_feature": "namespace-mismatch",
+      "schema": "validation/rules/sbgn_pd.sch"
+    },
+    {
+      "id": "compatibility-sbgnml-0.2-af-valid",
+      "input": "tests/fixtures/compatibility/sbgnml-0.2-af-valid.sbgn",
+      "language": "AF",
+      "namespace_policy": "allow-sbgnml-0.2",
+      "oracle": "conformance/oracle/java/compatibility/sbgnml-0.2-af-valid.json",
+      "phase": "basic",
+      "profile_feature": "sbgnml-0.2-valid",
+      "schema": "validation/rules/sbgn_af.sch"
+    },
+    {
+      "id": "compatibility-sbgnml-0.2-er-valid",
+      "input": "tests/fixtures/compatibility/sbgnml-0.2-er-valid.sbgn",
+      "language": "ER",
+      "namespace_policy": "allow-sbgnml-0.2",
+      "oracle": "conformance/oracle/java/compatibility/sbgnml-0.2-er-valid.json",
+      "phase": "basic",
+      "profile_feature": "sbgnml-0.2-valid",
+      "schema": "validation/rules/sbgn_er.sch"
+    },
+    {
+      "id": "compatibility-sbgnml-0.2-pd-valid",
+      "input": "tests/fixtures/compatibility/sbgnml-0.2-pd-valid.sbgn",
+      "language": "PD",
+      "namespace_policy": "allow-sbgnml-0.2",
+      "oracle": "conformance/oracle/java/compatibility/sbgnml-0.2-pd-valid.json",
+      "phase": "basic",
+      "profile_feature": "sbgnml-0.2-valid",
+      "schema": "validation/rules/sbgn_pd.sch"
+    },
+    {
+      "id": "compatibility-sbgnml-0.2-pd-invalid",
+      "input": "tests/examples/go_mf_conflicts.sbgn",
+      "language": "PD",
+      "namespace_policy": "allow-sbgnml-0.2",
+      "oracle": "conformance/oracle/java/compatibility/sbgnml-0.2-pd-invalid.json",
+      "phase": "basic",
+      "profile_feature": "sbgnml-0.2-semantic",
+      "schema": "validation/rules/sbgn_pd.sch"
+    },
+    {
+      "id": "compatibility-sbgnml-0.3-pd-valid",
+      "input": "tests/fixtures/error-test-files/PD/pd10110-pass.sbgn",
+      "language": "PD",
+      "namespace_policy": "allow-sbgnml-0.2",
+      "oracle": "conformance/oracle/java/compatibility/sbgnml-0.3-pd-valid.json",
+      "phase": "basic",
+      "profile_feature": "sbgnml-0.3-compatible",
+      "schema": "validation/rules/sbgn_pd.sch"
+    },
+    {
+      "id": "profile-current-time",
+      "input": "tests/fixtures/error-test-files/PD/pd10101-pass.sbgn",
+      "language": "PD",
+      "oracle": "conformance/oracle/java/profile/current-time.json",
+      "phase": "sanity",
+      "profile_feature": "current-time",
+      "schema": "validation/rules/sbgn_pd.sch"
+    }
+  ],
+  "fixture_count": 105,
+  "version": 1
+}

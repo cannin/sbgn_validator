@@ -1,0 +1,192 @@
+{
+  "evidence": "105 normalized reports compared with Java",
+  "profile": "libSBGN-Schematron-Profile-1",
+  "runtimes": {
+    "go": true,
+    "java": true,
+    "javascript": true,
+    "python": true,
+    "r": true,
+    "rust": true
+  },
+  "schematron_constructs": {
+    "active": {
+      "go": true,
+      "java": true,
+      "javascript": true,
+      "python": true,
+      "r": true,
+      "rust": true
+    },
+    "assert": {
+      "go": true,
+      "java": true,
+      "javascript": true,
+      "python": true,
+      "r": true,
+      "rust": true
+    },
+    "diagnostic": {
+      "go": true,
+      "java": true,
+      "javascript": true,
+      "python": true,
+      "r": true,
+      "rust": true
+    },
+    "diagnostics": {
+      "go": true,
+      "java": true,
+      "javascript": true,
+      "python": true,
+      "r": true,
+      "rust": true
+    },
+    "let": {
+      "go": true,
+      "java": true,
+      "javascript": true,
+      "python": true,
+      "r": true,
+      "rust": true
+    },
+    "ns": {
+      "go": true,
+      "java": true,
+      "javascript": true,
+      "python": true,
+      "r": true,
+      "rust": true
+    },
+    "pattern": {
+      "go": true,
+      "java": true,
+      "javascript": true,
+      "python": true,
+      "r": true,
+      "rust": true
+    },
+    "phase": {
+      "go": true,
+      "java": true,
+      "javascript": true,
+      "python": true,
+      "r": true,
+      "rust": true
+    },
+    "rule": {
+      "go": true,
+      "java": true,
+      "javascript": true,
+      "python": true,
+      "r": true,
+      "rust": true
+    },
+    "schema": {
+      "go": true,
+      "java": true,
+      "javascript": true,
+      "python": true,
+      "r": true,
+      "rust": true
+    },
+    "title": {
+      "go": true,
+      "java": true,
+      "javascript": true,
+      "python": true,
+      "r": true,
+      "rust": true
+    },
+    "value-of": {
+      "go": true,
+      "java": true,
+      "javascript": true,
+      "python": true,
+      "r": true,
+      "rust": true
+    }
+  },
+  "xpath_functions": {
+    "count": {
+      "go": true,
+      "java": true,
+      "javascript": true,
+      "python": true,
+      "r": true,
+      "rust": true
+    },
+    "current": {
+      "go": true,
+      "java": true,
+      "javascript": true,
+      "python": true,
+      "r": true,
+      "rust": true
+    },
+    "current-time": {
+      "go": true,
+      "java": true,
+      "javascript": true,
+      "python": true,
+      "r": true,
+      "rust": true
+    },
+    "distinct-values": {
+      "go": true,
+      "java": true,
+      "javascript": true,
+      "python": true,
+      "r": true,
+      "rust": true
+    },
+    "false": {
+      "go": true,
+      "java": true,
+      "javascript": true,
+      "python": true,
+      "r": true,
+      "rust": true
+    },
+    "local-name": {
+      "go": true,
+      "java": true,
+      "javascript": true,
+      "python": true,
+      "r": true,
+      "rust": true
+    },
+    "namespace-uri": {
+      "go": true,
+      "java": true,
+      "javascript": true,
+      "python": true,
+      "r": true,
+      "rust": true
+    },
+    "not": {
+      "go": true,
+      "java": true,
+      "javascript": true,
+      "python": true,
+      "r": true,
+      "rust": true
+    },
+    "position": {
+      "go": true,
+      "java": true,
+      "javascript": true,
+      "python": true,
+      "r": true,
+      "rust": true
+    },
+    "true": {
+      "go": true,
+      "java": true,
+      "javascript": true,
+      "python": true,
+      "r": true,
+      "rust": true
+    }
+  }
+}

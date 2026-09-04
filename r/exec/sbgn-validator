@@ -1,0 +1,87 @@
+#!/usr/bin/env Rscript
+
+usage <- function(detail = NULL) {
+  message_text <- paste(
+    "usage: sbgn-validator DOCUMENT [--schema PATH]",
+    "[--phase NAME] [--backend] [--rules-info] [--allow-sbgnml-0.2]"
+  )
+  if (!is.null(detail)) {
+    message_text <- paste(detail, message_text, sep = "\n")
+  }
+  stop(message_text, call. = FALSE)
+}
+
+parse_args <- function(args) {
+  options <- list(
+    phase = "basic",
+    backend = FALSE,
+    allow_sbgnml_0_2 = FALSE
+  )
+  index <- 1L
+  while (index <= length(args)) {
+    option <- args[[index]]
+    if (identical(option, "--backend")) {
+      options$backend <- TRUE
+      index <- index + 1L
+      next
+    }
+    if (identical(option, "--allow-sbgnml-0.2")) {
+      options$allow_sbgnml_0_2 <- TRUE
+      index <- index + 1L
+      next
+    }
+    if (identical(option, "--rules-info")) {
+      options$rules_info <- TRUE
+      index <- index + 1L
+      next
+    }
+    if (!startsWith(option, "--")) {
+      if (!is.null(options$document)) {
+        usage("multiple document paths")
+      }
+      options$document <- option
+      index <- index + 1L
+      next
+    }
+    if (!option %in% c("--schema", "--document", "--phase")) {
+      usage(paste("unknown option:", option))
+    }
+    if (index == length(args)) {
+      usage(paste("missing value for", option))
+    }
+    name <- sub("^--", "", option)
+    options[[name]] <- args[[index + 1L]]
+    index <- index + 2L
+  }
+  if (is.null(options$document) && !isTRUE(options$rules_info)) {
+    usage("a document path is required")
+  }
+  options
+}
+
+options <- parse_args(commandArgs(trailingOnly = TRUE))
+if (isTRUE(options$rules_info)) {
+  cat(jsonlite::toJSON(sbgnvalidator::rules_info(), auto_unbox = TRUE, pretty = TRUE,
+                       null = "null"), "\n", sep = "")
+  quit(status = 0L)
+}
+report <- sbgnvalidator::validate_sbgn(
+  options$document,
+  rules_path = options$schema,
+  phase = options$phase,
+  allow_sbgnml_0_2 = options$allow_sbgnml_0_2
+)
+if (!options$backend) {
+  report$backend <- NULL
+}
+cat(
+  jsonlite::toJSON(
+    report,
+    auto_unbox = TRUE,
+    pretty = TRUE,
+    null = "null",
+    digits = NA
+  ),
+  "\n",
+  sep = ""
+)

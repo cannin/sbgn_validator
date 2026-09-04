@@ -1,0 +1,1832 @@
+{
+  "axes": {
+    "attribute-abbreviation": 198,
+    "descendant-abbreviation": 65,
+    "parent-abbreviation": 14
+  },
+  "effective_semantics": "XPath 2 compatible plus XSLT current()",
+  "expressions": [
+    {
+      "attribute": "context",
+      "element": "rule",
+      "expression": "/*",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "test",
+      "element": "assert",
+      "expression": "false()",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "context",
+      "element": "rule",
+      "expression": "/*",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "test",
+      "element": "assert",
+      "expression": "namespace-uri() = 'http://sbgn.org/libsbgn/0.3'",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "select",
+      "element": "value-of",
+      "expression": "namespace-uri()",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "context",
+      "element": "rule",
+      "expression": "//*[@id]",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@id",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "test",
+      "element": "assert",
+      "expression": "count(//@id[. = current()/@id]) = 1",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "context",
+      "element": "rule",
+      "expression": "sbgn:arc",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@target",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "test",
+      "element": "assert",
+      "expression": "//*/@id[. = $target]",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "context",
+      "element": "rule",
+      "expression": "sbgn:arc[(@class='positive influence') or (@class='negative influence') or (@class='unknown influence') or (@class='necessary stimulation')]",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@id",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@source",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "//sbgn:glyph[@id=$source]/@class",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "//sbgn:port[@id=$source]/../@class",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "test",
+      "element": "assert",
+      "expression": "$source-class='biological activity' or $source-class='perturbation' or $port-class='and' or $port-class='or' or $port-class='not' or $port-class='delay'",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "context",
+      "element": "rule",
+      "expression": "sbgn:arc[(@class='positive influence') or (@class='negative influence') or (@class='unknown influence') or (@class='necessary stimulation')]",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@id",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@target",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "//sbgn:glyph[@id=$target]/@class",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "//sbgn:port[@id=$target]/../@class",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "test",
+      "element": "assert",
+      "expression": "$target-class='biological activity' or $target-class='phenotype'",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "context",
+      "element": "rule",
+      "expression": "sbgn:arc",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@id",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@class",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "test",
+      "element": "assert",
+      "expression": "$class='logic arc' or $class='equivalence arc' or $class='positive influence' or $class='negative influence' or $class='necessary stimulation' or $class='unknown influence'",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "context",
+      "element": "rule",
+      "expression": "sbgn:glyph",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@id",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@class",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "test",
+      "element": "assert",
+      "expression": "$class='biological activity' or $class='and' or $class='or' or $class='not' or $class='delay' or $class='tag' or $class='submap' or $class='terminal' or $class='unit of information' or $class='compartment' or $class='perturbation' or $class='phenotype'",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "context",
+      "element": "rule",
+      "expression": "sbgn:arc[@class='logic arc']",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@id",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@source",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "//sbgn:glyph[@id=$source]/@class",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "test",
+      "element": "assert",
+      "expression": "$source-class='biological activity'",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "context",
+      "element": "rule",
+      "expression": "sbgn:arc[@class='logic arc']",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@id",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@target",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "//sbgn:glyph[@id=$target]/@class",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "//sbgn:port[@id=$target]/../@class",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "test",
+      "element": "assert",
+      "expression": "$port-class='and' or $port-class='or' or $port-class='not' or $port-class='delay'",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "context",
+      "element": "rule",
+      "expression": "sbgn:glyph[@class='not']",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@id",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "./sbgn:port/@id",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "count(//sbgn:arc[(./@class = 'logic arc') and (./@target = current()/sbgn:port/@id)])",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "test",
+      "element": "assert",
+      "expression": "$count = 1",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "context",
+      "element": "rule",
+      "expression": "sbgn:arc[@class='equivalence arc']",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@id",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@source",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "//sbgn:glyph[@id=$source]/@class",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "test",
+      "element": "assert",
+      "expression": "$source-class='biological activity' or $source-class='compartment'",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "context",
+      "element": "rule",
+      "expression": "sbgn:arc[@class='equivalence arc']",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@id",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@target",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "//sbgn:glyph[@id=$target]/@class",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "test",
+      "element": "assert",
+      "expression": "$target-class='tag' or $target-class='submap' or $target-class='terminal'",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "context",
+      "element": "rule",
+      "expression": "sbgn:map/sbgn:glyph[(@class='biological activity')]",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@id",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "count(//sbgn:glyph[@class='compartment'])",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "test",
+      "element": "assert",
+      "expression": "(($compartment-count = 0) and not (@compartmentRef)) or (($compartment-count > 0) and @compartmentRef)",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "select",
+      "element": "value-of",
+      "expression": "$id",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "select",
+      "element": "value-of",
+      "expression": "$port-id",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "select",
+      "element": "value-of",
+      "expression": "$target",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "select",
+      "element": "value-of",
+      "expression": "$source",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "select",
+      "element": "value-of",
+      "expression": "$class",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "select",
+      "element": "value-of",
+      "expression": "$source-class",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "select",
+      "element": "value-of",
+      "expression": "$target-class",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "select",
+      "element": "value-of",
+      "expression": "$port-class",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "select",
+      "element": "value-of",
+      "expression": "$arc-count",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "select",
+      "element": "value-of",
+      "expression": "$count",
+      "schema": "sbgn_af.sch"
+    },
+    {
+      "attribute": "context",
+      "element": "rule",
+      "expression": "/*",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "test",
+      "element": "assert",
+      "expression": "false()",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "context",
+      "element": "rule",
+      "expression": "/*",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "test",
+      "element": "assert",
+      "expression": "namespace-uri() = 'http://sbgn.org/libsbgn/0.3'",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "select",
+      "element": "value-of",
+      "expression": "namespace-uri()",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "context",
+      "element": "rule",
+      "expression": "//*[@id]",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@id",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "test",
+      "element": "assert",
+      "expression": "count(//@id[. = current()/@id]) = 1",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "context",
+      "element": "rule",
+      "expression": "sbgn:arc",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@target",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "test",
+      "element": "assert",
+      "expression": "//*/@id[. = $target]",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "context",
+      "element": "rule",
+      "expression": "sbgn:glyph[@class='interaction']",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@id",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "../local-name()",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "test",
+      "element": "assert",
+      "expression": "$parent-tag-name='arcgroup'",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "context",
+      "element": "rule",
+      "expression": "sbgn:arc[@class='assignment']",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@source",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "//sbgn:glyph[@id=$source]/@class",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "test",
+      "element": "assert",
+      "expression": "$class='variable value' or $class='implicit xor'",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "context",
+      "element": "rule",
+      "expression": "sbgn:arc[@class='assignment']",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@id",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@target",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "//sbgn:glyph[@id=$target]/@class",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "test",
+      "element": "assert",
+      "expression": "$target-class='state variable' or $target-class='existence' or $target-class='location' or $target-class='implicit xor'",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "context",
+      "element": "rule",
+      "expression": "sbgn:arc[@class='interaction']",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@id",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@source",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "//sbgn:glyph[@id=$source]/@class",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "test",
+      "element": "assert",
+      "expression": "$class='entity' or $class='outcome' or $class='unit of information' or $class='interaction'",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "context",
+      "element": "rule",
+      "expression": "sbgn:arc[@class='interaction']",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@id",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@target",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "//sbgn:glyph[@id=$target]/@class",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "test",
+      "element": "assert",
+      "expression": "$target-class='entity' or $target-class='outcome' or $target-class='unit of information'",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "context",
+      "element": "rule",
+      "expression": "sbgn:glyph[@class='outcome']",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@id",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "./sbgn:port/@id",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "count(//sbgn:arc[(./@class = 'interaction') and (./@source = current()/sbgn:port/@id)])",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "count(//sbgn:arc[(./@class = 'interaction') and (./@target = current()/sbgn:port/@id)])",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "test",
+      "element": "assert",
+      "expression": "($source-count <= 1) and ($target-count <= 1)",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "context",
+      "element": "rule",
+      "expression": "sbgn:arc[(@class='modulation') or (@class='stimulation') or (@class='inhibition') or (@class='necessary stimulation') or (@class='absolute inhibition') or (@class='absolute stimulation')]",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@id",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@source",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "//sbgn:port[@id=$source]/../@class",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "//sbgn:glyph[@id=$source]/@class",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "test",
+      "element": "assert",
+      "expression": "$class='entity' or $class='outcome' or $port-class='and' or $port-class='or' or $port-class='not' or $port-class='delay' or $class='perturbing agent'",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "context",
+      "element": "rule",
+      "expression": "sbgn:arc[(@class='modulation') or (@class='stimulation') or (@class='inhibition') or (@class='necessary stimulation') or (@class='absolute inhibition') or (@class='absolute stimulation')]",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@id",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@target",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "//sbgn:glyph[@id=$target]/@class",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "//sbgn:port[@id=$target]/../@class",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "test",
+      "element": "assert",
+      "expression": "$port-class='modulation' or $port-class='stimulation' or $port-class='inhibition' or $port-class='necessary stimulation' or $port-class='absolute stimulation' or $port-class='assignment' or $port-class='interaction' or $class='phenotype'",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "context",
+      "element": "rule",
+      "expression": "sbgn:glyph[(@class='outcome') or (@class='and') or (@class='or') or (@class='not') or (@class='delay')]",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@id",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "./sbgn:port/@id",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "count(//sbgn:arc[./@source = current()/sbgn:port/@id])",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "test",
+      "element": "assert",
+      "expression": "$source-count <= 1",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "context",
+      "element": "rule",
+      "expression": "sbgn:arc[@class='logic arc']",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@id",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@target",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "//sbgn:port[@id=$target]/../@class",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "test",
+      "element": "assert",
+      "expression": "$port-class='and' or $port-class='or' or $port-class='not' or $port-class='delay'",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "context",
+      "element": "rule",
+      "expression": "sbgn:glyph[(@class='not') or (@class='delay')]",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@id",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "./sbgn:port/@id",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "count(//sbgn:arc[(./@class = 'logic arc') and (./@target = current()/sbgn:port/@id)])",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "test",
+      "element": "assert",
+      "expression": "$target-count <= 1",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "select",
+      "element": "value-of",
+      "expression": "$id",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "select",
+      "element": "value-of",
+      "expression": "$parent",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "select",
+      "element": "value-of",
+      "expression": "$source",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "select",
+      "element": "value-of",
+      "expression": "$class",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "select",
+      "element": "value-of",
+      "expression": "$source-count",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "select",
+      "element": "value-of",
+      "expression": "$target-count",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "select",
+      "element": "value-of",
+      "expression": "$target",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "select",
+      "element": "value-of",
+      "expression": "$target-class",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "select",
+      "element": "value-of",
+      "expression": "$port-id",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "select",
+      "element": "value-of",
+      "expression": "$port-class",
+      "schema": "sbgn_er.sch"
+    },
+    {
+      "attribute": "context",
+      "element": "rule",
+      "expression": "/*",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "test",
+      "element": "assert",
+      "expression": "false()",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "select",
+      "element": "value-of",
+      "expression": "current-time()",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "select",
+      "element": "value-of",
+      "expression": "namespace-uri()",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "context",
+      "element": "rule",
+      "expression": "/*",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "test",
+      "element": "assert",
+      "expression": "namespace-uri() = 'http://sbgn.org/libsbgn/0.3'",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "select",
+      "element": "value-of",
+      "expression": "namespace-uri()",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "context",
+      "element": "rule",
+      "expression": "//*[@id]",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@id",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "test",
+      "element": "assert",
+      "expression": "count(//@id[. = current()/@id]) = 1",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "context",
+      "element": "rule",
+      "expression": "sbgn:arc",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@target",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "test",
+      "element": "assert",
+      "expression": "//*/@id[. = $target]",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "context",
+      "element": "rule",
+      "expression": "sbgn:arc[@class='consumption']",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@id",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@source",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "//sbgn:glyph[@id=$source]/@class",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "test",
+      "element": "assert",
+      "expression": "$class='macromolecule' or $class='macromolecule multimer' or $class='simple chemical' or $class='unspecified entity' or $class='complex multimer' or $class='complex' or $class='nucleic acid feature' or $class='simple chemical multimer' or $class='nucleic acid feature multimer' or $class='source and sink'",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "context",
+      "element": "rule",
+      "expression": "sbgn:arc[@class='consumption']",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@id",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@target",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "//sbgn:port[@id=$target]/../@class",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "test",
+      "element": "assert",
+      "expression": "$port-class='process' or $port-class='omitted process' or $port-class='uncertain process' or $port-class='association' or $port-class='dissociation' or $port-class='phenotype'",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "context",
+      "element": "rule",
+      "expression": "sbgn:glyph[@class='source and sink']",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@id",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "count(//sbgn:arc[(./@class = 'consumption') and (./@source = $id)])",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "test",
+      "element": "assert",
+      "expression": "$count <= 1",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "context",
+      "element": "rule",
+      "expression": "sbgn:glyph[@class='dissociation']",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@id",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "./sbgn:port/@id",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "count(//sbgn:arc[(./@class = 'consumption') and (./@target = current()/sbgn:port/@id)])",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "test",
+      "element": "assert",
+      "expression": "$count = 1",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "context",
+      "element": "rule",
+      "expression": "sbgn:arc[@class='production']",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@id",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@source",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "//sbgn:port[@id=$source]/../@class",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "test",
+      "element": "assert",
+      "expression": "$port-class='process' or $port-class='omitted process' or $port-class='uncertain process' or $port-class='association' or $port-class='dissociation' or $port-class='phenotype'",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "context",
+      "element": "rule",
+      "expression": "sbgn:arc[@class='production']",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@id",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@target",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "//sbgn:glyph[@id=$target]/@class",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "test",
+      "element": "assert",
+      "expression": "$class='macromolecule' or $class='macromolecule multimer' or $class='simple chemical' or $class='unspecified entity' or $class='complex multimer' or $class='complex' or $class='nucleic acid feature' or $class='simple chemical multimer' or $class='nucleic acid feature multimer' or $class='source and sink'",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "context",
+      "element": "rule",
+      "expression": "sbgn:glyph[@class='source and sink']",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@id",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "count(//sbgn:arc[(./@class = 'production') and (./@target = $id)])",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "test",
+      "element": "assert",
+      "expression": "$count <= 1",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "context",
+      "element": "rule",
+      "expression": "sbgn:glyph[@class='association']",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@id",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "./sbgn:port/@id",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "count(//sbgn:arc[(./@class = 'production') and (./@source = current()/sbgn:port/@id)])",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "test",
+      "element": "assert",
+      "expression": "$count = 1",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "context",
+      "element": "rule",
+      "expression": "sbgn:arc[(@class='modulation') or (@class='stimulation') or (@class='catalysis') or (@class='inhibition') or (@class='necessary stimulation')]",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@id",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@source",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "//sbgn:glyph[@id=$source]/@class",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "//sbgn:port[@id=$source]/../@class",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "test",
+      "element": "assert",
+      "expression": "( $class='unspecified entity' or $class='simple chemical' or $class='macromolecule' or $class='macromolecule multimer' or $class='nucleic acid feature' or $class='simple chemical multimer' or $class='nucleic acid feature multimer' or $class='complex' or $class='complex multimer' or $class='perturbing agent') or ( $port-class='and' or $port-class='or' or $port-class='not')",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "context",
+      "element": "rule",
+      "expression": "sbgn:arc[(@class='modulation') or (@class='stimulation') or (@class='catalysis') or (@class='inhibition') or (@class='necessary stimulation')]",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@id",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@target",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "//sbgn:glyph[@id=$target]/@class",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "test",
+      "element": "assert",
+      "expression": "$target-class='process' or $target-class='omitted process' or $target-class='uncertain process' or $target-class='association' or $target-class='dissociation' or $target-class='phenotype'",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "context",
+      "element": "rule",
+      "expression": "sbgn:glyph[(@class='and') or (@class='or') or (@class='not')]",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@id",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "./sbgn:port/@id",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "count(//sbgn:arc[./@source = current()/sbgn:port/@id])",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "test",
+      "element": "assert",
+      "expression": "$count = 1",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "context",
+      "element": "rule",
+      "expression": "sbgn:map/sbgn:glyph[(@class = 'unspecified entity' or @class = 'simple chemical' or @class = 'macromolecule' or @class = 'nucleic acid feature' or @class = 'simple chemical multimer' or @class = 'macromolecule multimer' or @class = 'nucleic acid feature multimer' or @class = 'complex' or @class = 'complex multimer' or @class = 'source and sink' or @class = 'perturbing agent')]",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@id",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "count(//sbgn:glyph[@class='compartment'])",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "test",
+      "element": "assert",
+      "expression": "(($compartment-count = 0) and not (@compartmentRef)) or (($compartment-count > 0) and @compartmentRef)",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "context",
+      "element": "rule",
+      "expression": "sbgn:arc[@class='logic arc']",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@id",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@source",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "//sbgn:glyph[@id=$source]/@class",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "//sbgn:port[@id=$source]/../@class",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "test",
+      "element": "assert",
+      "expression": "$class='unspecified entity' or $class='simple chemical' or $class='macromolecule' or $class='macromolecule multimer' or $class='nucleic acid feature' or $class='simple chemical multimer' or $class='nucleic acid feature multimer' or $class='complex' or $class='complex multimer' or $port-class='and' or $port-class='or' or $port-class='not'",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "context",
+      "element": "rule",
+      "expression": "sbgn:arc[@class='logic arc']",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@id",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@target",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "//sbgn:port[@id=$target]/../@class",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "test",
+      "element": "assert",
+      "expression": "$port-class='and' or $port-class='or' or $port-class='not'",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "context",
+      "element": "rule",
+      "expression": "sbgn:glyph[@class='not']",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@id",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "./sbgn:port/@id",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "count(//sbgn:arc[(./@class = 'logic arc') and (./@target = current()/sbgn:port/@id)])",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "test",
+      "element": "assert",
+      "expression": "$count = 1",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "context",
+      "element": "rule",
+      "expression": "sbgn:arc[@class='equivalence arc']",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@id",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@source",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "//sbgn:glyph[@id=$source]/@class",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "test",
+      "element": "assert",
+      "expression": "$class='unspecified entity' or $class='simple chemical' or $class='macromolecule' or $class='macromolecule multimer' or $class='nucleic acid feature' or $class='simple chemical multimer' or $class='nucleic acid feature multimer' or $class='complex' or $class='complex multimer' or $class='source and sink' or $class='perturbing agent'",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "context",
+      "element": "rule",
+      "expression": "sbgn:arc[@class='equivalence arc']",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@id",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@target",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "//sbgn:glyph[@id=$target]/@class",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "test",
+      "element": "assert",
+      "expression": "$class='tag' or $class='submap' or $class='terminal'",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "context",
+      "element": "rule",
+      "expression": "sbgn:glyph[@class='and']/sbgn:port/sbgn:state",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@id",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "test",
+      "element": "assert",
+      "expression": "count(../../sbgn:port/sbgn:state[@variable = current()/@variable]) <= 2",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "context",
+      "element": "rule",
+      "expression": "sbgn:arc[@source = //sbgn:glyph[@class='complex']/sbgn:glyph/@id]",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "//sbgn:glyph[@class='complex']/sbgn:glyph[not(@class='complex')]/@id",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@class",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "test",
+      "element": "assert",
+      "expression": "@class = 'modulation'",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "context",
+      "element": "rule",
+      "expression": "/sbgn:sbgn/sbgn:map/sbgn:glyph[ @class = 'unspecified entity' or @class = 'simple chemical' or @class = 'macromolecule' or @class = 'nucleic acid feature' or @class = 'simple chemical multimer' or @class = 'macromolecule multimer' or @class = 'nucleic acid feature multimer' or @class = 'complex' or @class = 'complex multimer' or @class = 'source and sink' or @class = 'perturbing agent']",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@id",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "//sbgn:arc[@source = $id or @target = $id]/@class",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "test",
+      "element": "assert",
+      "expression": "//sbgn:arc[( @class = 'production' or @class = 'consumption' or @class = 'modulation' or @class = 'stimulation' or @class = 'catalysis' or @class = 'inhibition' or @class = 'necessary stimulation' or @class = 'logic arc' or @class = 'equivalence arc' or @class = 'production') and (@source = $id or @target = $id)]",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "context",
+      "element": "rule",
+      "expression": "sbgn:glyph[ @class='process' or @class='omitted process' or @class='uncertain process' or @class='association' or @class='dissociation' ]",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@id",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "count(sbgn:port)",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "test",
+      "element": "assert",
+      "expression": "$port-count = 2",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "context",
+      "element": "rule",
+      "expression": "sbgn:glyph[ @class='process' or @class='omitted process' or @class='uncertain process' or @class='association' or @class='dissociation' ]",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@id",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "./sbgn:port[position() = 1]/@id",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "./sbgn:port[position() = 2]/@id",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "count(//sbgn:arc[@source = $port-id-1])",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "count(distinct-values(//sbgn:arc[@source = $port-id-1]/@target))",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "count(//sbgn:arc[@source = $port-id-2])",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "count(distinct-values(//sbgn:arc[@source = $port-id-2]/@target))",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "test",
+      "element": "assert",
+      "expression": "($arc-count-2 = $arc-count-distinct-2) and ($arc-count-1 = $arc-count-distinct-1)",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "context",
+      "element": "rule",
+      "expression": "/*",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "test",
+      "element": "assert",
+      "expression": "true()",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "test",
+      "element": "assert",
+      "expression": "true()",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "context",
+      "element": "rule",
+      "expression": "sbgn:glyph",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@id",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@class",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "test",
+      "element": "assert",
+      "expression": "not($class='biological activity' or $class='outcome' or $class='variable value' or $class='entity')",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "context",
+      "element": "rule",
+      "expression": "sbgn:glyph[@class='process']",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@id",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "./sbgn:port/@id",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "count(//sbgn:arc[(./@target = current()/sbgn:port/@id) or (./@source = current()/sbgn:port/@id)])",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "test",
+      "element": "assert",
+      "expression": "($count >= 2)",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "context",
+      "element": "rule",
+      "expression": "sbgn:arc[@class='logic arc']",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@id",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@source",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "@target",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "value",
+      "element": "let",
+      "expression": "//sbgn:port[@id=$source or @id=$target]/../@class",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "test",
+      "element": "assert",
+      "expression": "$port-class='and' or $port-class='or' or $port-class='not'",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "select",
+      "element": "value-of",
+      "expression": "$id",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "select",
+      "element": "value-of",
+      "expression": "$port-id",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "select",
+      "element": "value-of",
+      "expression": "$target",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "select",
+      "element": "value-of",
+      "expression": "$target-class",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "select",
+      "element": "value-of",
+      "expression": "$source",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "select",
+      "element": "value-of",
+      "expression": "$class",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "select",
+      "element": "value-of",
+      "expression": "$port-class",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "select",
+      "element": "value-of",
+      "expression": "$count",
+      "schema": "sbgn_pd.sch"
+    },
+    {
+      "attribute": "select",
+      "element": "value-of",
+      "expression": "$arc-count",
+      "schema": "sbgn_pd.sch"
+    }
+  ],
+  "functions": {
+    "count": 23,
+    "current": 15,
+    "current-time": 1,
+    "distinct-values": 2,
+    "false": 3,
+    "local-name": 1,
+    "namespace-uri": 7,
+    "not": 4,
+    "position": 2,
+    "true": 2
+  },
+  "operators": {
+    "and": 33,
+    "equals": 145,
+    "greater_than": 2,
+    "greater_than_or_equal": 1,
+    "less_than_or_equal": 6,
+    "or": 45
+  },
+  "profile": "libSBGN-Schematron-Profile-1",
+  "variables": {
+    "arc-count": 2,
+    "arc-count-1": 1,
+    "arc-count-2": 1,
+    "arc-count-distinct-1": 1,
+    "arc-count-distinct-2": 1,
+    "class": 88,
+    "compartment-count": 4,
+    "count": 10,
+    "id": 9,
+    "parent": 1,
+    "parent-tag-name": 1,
+    "port-class": 50,
+    "port-count": 1,
+    "port-id": 3,
+    "port-id-1": 2,
+    "port-id-2": 2,
+    "source": 19,
+    "source-class": 6,
+    "source-count": 3,
+    "target": 22,
+    "target-class": 21,
+    "target-count": 3
+  },
+  "xquery_required": false
+}

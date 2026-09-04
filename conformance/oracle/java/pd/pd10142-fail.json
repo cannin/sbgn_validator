@@ -1,0 +1,63 @@
+{
+  "schema" : "sbgn_pd.sch",
+  "phase" : "basic",
+  "valid" : false,
+  "findings" : [ {
+    "id" : "pd10125",
+    "type" : "failed-assert",
+    "role" : "error",
+    "flag" : null,
+    "location" : "/Q{http://sbgn.org/libsbgn/0.3}sbgn[1]/Q{http://sbgn.org/libsbgn/0.3}map[1]/Q{http://sbgn.org/libsbgn/0.3}arc[3]",
+    "test" : "$port-class='and' or     $port-class='or' or     $port-class='not'",
+    "text" : "Arc with class logic arc must have target reference to a logical operator",
+    "diagnostic_references" : [ {
+      "diagnostic" : "id",
+      "text" : "a1"
+    }, {
+      "diagnostic" : "target",
+      "text" : "glyph6.2"
+    }, {
+      "diagnostic" : "port-class",
+      "text" : "process"
+    } ],
+    "derived" : {
+      "element_id" : "a1",
+      "element_kind" : "arc"
+    }
+  }, {
+    "id" : "pd10142",
+    "type" : "failed-assert",
+    "role" : "error",
+    "flag" : null,
+    "location" : "/Q{http://sbgn.org/libsbgn/0.3}sbgn[1]/Q{http://sbgn.org/libsbgn/0.3}map[1]/Q{http://sbgn.org/libsbgn/0.3}arc[3]",
+    "test" : "     $port-class='and' or      $port-class='or' or     $port-class='not'",
+    "text" : "logic Arc must be connected to either 'OR', 'AND' or 'NOT'",
+    "diagnostic_references" : [ {
+      "diagnostic" : "id",
+      "text" : "a1"
+    }, {
+      "diagnostic" : "target",
+      "text" : "glyph6.2"
+    }, {
+      "diagnostic" : "source",
+      "text" : "glyph0"
+    }, {
+      "diagnostic" : "port-class",
+      "text" : "process"
+    } ],
+    "derived" : {
+      "element_id" : "a1",
+      "element_kind" : "arc"
+    }
+  } ],
+  "backend" : {
+    "language" : "java",
+    "implementation" : "sbgn-validator-java",
+    "implementation_version" : "0.1.0",
+    "schematron_engine" : "ph-schematron-schxslt2 10.0.1 / SchXslt2",
+    "xpath_engine" : "Saxon-HE",
+    "xpath_version" : "12.10",
+    "native_schematron" : true,
+    "profile_version" : "libSBGN-Schematron-Profile-1"
+  }
+}

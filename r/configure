@@ -1,0 +1,22 @@
+#!/bin/sh
+set -eu
+
+pkg_config=""
+for candidate in /opt/homebrew/bin/pkg-config /usr/local/bin/pkg-config pkg-config; do
+    if command -v "$candidate" >/dev/null 2>&1 && "$candidate" --exists libxml-2.0; then
+        pkg_config=$candidate
+        break
+    fi
+done
+
+if [ -n "$pkg_config" ]; then
+    cppflags=$($pkg_config --cflags libxml-2.0)
+    libs=$($pkg_config --libs libxml-2.0)
+elif command -v xml2-config >/dev/null 2>&1; then
+    cppflags=$(xml2-config --cflags)
+    libs=$(xml2-config --libs)
+else
+    echo "configure: error: libxml2 development files are required" >&2
+    exit 1
+fi
+sed -e "s|@XML2_CPPFLAGS@|$cppflags|" -e "s|@XML2_LIBS@|$libs|" src/Makevars.in > src/Makevars

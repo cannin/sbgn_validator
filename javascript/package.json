@@ -1,0 +1,26 @@
+{
+  "name": "sbgn-validator",
+  "version": "0.1.0",
+  "files": [
+    "src/",
+    "resources/"
+  ],
+  "type": "module",
+  "main": "src/validator.js",
+  "exports": {
+    ".": "./src/validator.js",
+    "./rules": "./src/rules.js"
+  },
+  "bin": {
+    "sbgn-validator": "src/cli.js"
+  },
+  "scripts": {
+    "test": "node --test",
+    "results": "node src/generate-results.js"
+  },
+  "dependencies": {
+    "fontoxpath": "3.34.0",
+    "node-schematron": "2.1.0",
+    "slimdom": "4.3.5"
+  }
+}

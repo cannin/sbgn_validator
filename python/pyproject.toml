@@ -1,0 +1,31 @@
+[project]
+name = "sbgn-validator"
+version = "0.1.0"
+requires-python = ">=3.14"
+dependencies = [
+  "elementpath==5.0.4",
+  "pyschematron==1.2.1",
+]
+
+[project.scripts]
+sbgn-validator = "sbgn_validator.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["sbgn_validator"]
+
+[tool.hatch.build]
+artifacts = ["sbgn_validator/_resources/schematron/*"]
+
+[project.optional-dependencies]
+test = ["pytest==8.4.2", "ruff==0.12.11"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py314"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]

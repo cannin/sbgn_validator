@@ -1,0 +1,60 @@
+{
+  "schema" : "sbgn_pd.sch",
+  "phase" : "basic",
+  "valid" : false,
+  "findings" : [ {
+    "id" : "pd10101",
+    "type" : "failed-assert",
+    "role" : "error",
+    "flag" : null,
+    "location" : "/Q{http://sbgn.org/libsbgn/0.3}sbgn[1]/Q{http://sbgn.org/libsbgn/0.3}map[1]/Q{http://sbgn.org/libsbgn/0.3}arc[1]",
+    "test" : "     $class='macromolecule' or      $class='macromolecule multimer' or     $class='simple chemical' or     $class='unspecified entity' or      $class='complex multimer' or       $class='complex' or      $class='nucleic acid feature' or      $class='simple chemical multimer' or      $class='nucleic acid feature multimer' or      $class='source and sink'",
+    "text" : "Arc with class consumption must have source reference to glyph of EPN classes",
+    "diagnostic_references" : [ {
+      "diagnostic" : "id",
+      "text" : "a1"
+    }, {
+      "diagnostic" : "source",
+      "text" : "glyph4.1"
+    }, {
+      "diagnostic" : "class",
+      "text" : ""
+    } ],
+    "derived" : {
+      "element_id" : "a1",
+      "element_kind" : "arc"
+    }
+  }, {
+    "id" : "pd10102",
+    "type" : "failed-assert",
+    "role" : "error",
+    "flag" : null,
+    "location" : "/Q{http://sbgn.org/libsbgn/0.3}sbgn[1]/Q{http://sbgn.org/libsbgn/0.3}map[1]/Q{http://sbgn.org/libsbgn/0.3}arc[1]",
+    "test" : "     $port-class='process' or      $port-class='omitted process' or     $port-class='uncertain process' or     $port-class='association' or     $port-class='dissociation' or     $port-class='phenotype'",
+    "text" : "Arc with class consumption must have target reference to port on glyph with PN classes",
+    "diagnostic_references" : [ {
+      "diagnostic" : "id",
+      "text" : "a1"
+    }, {
+      "diagnostic" : "target",
+      "text" : "glyph2"
+    }, {
+      "diagnostic" : "port-class",
+      "text" : ""
+    } ],
+    "derived" : {
+      "element_id" : "a1",
+      "element_kind" : "arc"
+    }
+  } ],
+  "backend" : {
+    "language" : "java",
+    "implementation" : "sbgn-validator-java",
+    "implementation_version" : "0.1.0",
+    "schematron_engine" : "ph-schematron-schxslt2 10.0.1 / SchXslt2",
+    "xpath_engine" : "Saxon-HE",
+    "xpath_version" : "12.10",
+    "native_schematron" : true,
+    "profile_version" : "libSBGN-Schematron-Profile-1"
+  }
+}

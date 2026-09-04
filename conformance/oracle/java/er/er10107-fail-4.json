@@ -1,0 +1,41 @@
+{
+  "schema" : "sbgn_er.sch",
+  "phase" : "basic",
+  "valid" : false,
+  "findings" : [ {
+    "id" : "er10107",
+    "type" : "failed-assert",
+    "role" : "error",
+    "flag" : null,
+    "location" : "/Q{http://sbgn.org/libsbgn/0.3}sbgn[1]/Q{http://sbgn.org/libsbgn/0.3}map[1]/Q{http://sbgn.org/libsbgn/0.3}arc[2]",
+    "test" : "     $port-class='modulation' or     $port-class='stimulation' or     $port-class='inhibition' or     $port-class='necessary stimulation' or     $port-class='absolute stimulation' or     $port-class='assignment' or     $port-class='interaction' or     $class='phenotype'",
+    "text" : "Incorrect target reference for influence arc",
+    "diagnostic_references" : [ {
+      "diagnostic" : "id",
+      "text" : "e8037"
+    }, {
+      "diagnostic" : "class",
+      "text" : "entity"
+    }, {
+      "diagnostic" : "target",
+      "text" : "g2"
+    }, {
+      "diagnostic" : "port-class",
+      "text" : ""
+    } ],
+    "derived" : {
+      "element_id" : "e8037",
+      "element_kind" : "arc"
+    }
+  } ],
+  "backend" : {
+    "language" : "java",
+    "implementation" : "sbgn-validator-java",
+    "implementation_version" : "0.1.0",
+    "schematron_engine" : "ph-schematron-schxslt2 10.0.1 / SchXslt2",
+    "xpath_engine" : "Saxon-HE",
+    "xpath_version" : "12.10",
+    "native_schematron" : true,
+    "profile_version" : "libSBGN-Schematron-Profile-1"
+  }
+}

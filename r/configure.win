@@ -1,0 +1,25 @@
+#!/bin/sh
+set -eu
+
+pkg_config=""
+for candidate in pkg-config.exe pkg-config xml2-config; do
+    if command -v "$candidate" >/dev/null 2>&1; then
+        pkg_config=$candidate
+        break
+    fi
+done
+
+if [ -z "$pkg_config" ]; then
+    echo "configure.win: error: Rtools libxml2 development files are required" >&2
+    exit 1
+fi
+
+if [ "$pkg_config" = "xml2-config" ]; then
+    cppflags=$(xml2-config --cflags)
+    libs=$(xml2-config --libs)
+else
+    cppflags=$($pkg_config --cflags libxml-2.0)
+    libs=$($pkg_config --libs libxml-2.0)
+fi
+sed -e "s|@XML2_CPPFLAGS@|$cppflags|" -e "s|@XML2_LIBS@|$libs|" \
+    src/Makevars.win.in > src/Makevars.win

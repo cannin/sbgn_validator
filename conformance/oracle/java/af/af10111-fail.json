@@ -1,0 +1,38 @@
+{
+  "schema" : "sbgn_af.sch",
+  "phase" : "basic",
+  "valid" : false,
+  "findings" : [ {
+    "id" : "af10111",
+    "type" : "failed-assert",
+    "role" : "error",
+    "flag" : null,
+    "location" : "/Q{http://sbgn.org/libsbgn/0.3}sbgn[1]/Q{http://sbgn.org/libsbgn/0.3}map[1]/Q{http://sbgn.org/libsbgn/0.3}glyph[4]",
+    "test" : "$count = 1",
+    "text" : "'not' glyph can only be connected to one logic arc glyph.",
+    "diagnostic_references" : [ {
+      "diagnostic" : "id",
+      "text" : "glyph4"
+    }, {
+      "diagnostic" : "port-id",
+      "text" : "glyph4.1 glyph4.2"
+    }, {
+      "diagnostic" : "count",
+      "text" : "2"
+    } ],
+    "derived" : {
+      "element_id" : "glyph4",
+      "element_kind" : "glyph"
+    }
+  } ],
+  "backend" : {
+    "language" : "java",
+    "implementation" : "sbgn-validator-java",
+    "implementation_version" : "0.1.0",
+    "schematron_engine" : "ph-schematron-schxslt2 10.0.1 / SchXslt2",
+    "xpath_engine" : "Saxon-HE",
+    "xpath_version" : "12.10",
+    "native_schematron" : true,
+    "profile_version" : "libSBGN-Schematron-Profile-1"
+  }
+}

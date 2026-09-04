@@ -1,0 +1,35 @@
+{
+  "schema" : "sbgn_pd.sch",
+  "phase" : "basic",
+  "valid" : false,
+  "findings" : [ {
+    "id" : "pd10141",
+    "type" : "failed-assert",
+    "role" : "error",
+    "flag" : null,
+    "location" : "/Q{http://sbgn.org/libsbgn/0.3}sbgn[1]/Q{http://sbgn.org/libsbgn/0.3}map[1]/Q{http://sbgn.org/libsbgn/0.3}glyph[1]",
+    "test" : "($count >= 2)",
+    "text" : "All process nodes should have at least one input and at least one ouput pointing to the arcs",
+    "diagnostic_references" : [ {
+      "diagnostic" : "id",
+      "text" : "glyph6"
+    }, {
+      "diagnostic" : "count",
+      "text" : "0"
+    } ],
+    "derived" : {
+      "element_id" : "glyph6",
+      "element_kind" : "glyph"
+    }
+  } ],
+  "backend" : {
+    "language" : "java",
+    "implementation" : "sbgn-validator-java",
+    "implementation_version" : "0.1.0",
+    "schematron_engine" : "ph-schematron-schxslt2 10.0.1 / SchXslt2",
+    "xpath_engine" : "Saxon-HE",
+    "xpath_version" : "12.10",
+    "native_schematron" : true,
+    "profile_version" : "libSBGN-Schematron-Profile-1"
+  }
+}

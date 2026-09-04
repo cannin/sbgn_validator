@@ -1,0 +1,38 @@
+{
+  "schema" : "sbgn_er.sch",
+  "phase" : "basic",
+  "valid" : false,
+  "findings" : [ {
+    "id" : "er10111",
+    "type" : "failed-assert",
+    "role" : "error",
+    "flag" : null,
+    "location" : "/Q{http://sbgn.org/libsbgn/0.3}sbgn[1]/Q{http://sbgn.org/libsbgn/0.3}map[1]/Q{http://sbgn.org/libsbgn/0.3}glyph[2]",
+    "test" : "$target-count <= 1",
+    "text" : "The 'not', and 'delay' glyphs can only be connected to one logic arc glyph at the output.",
+    "diagnostic_references" : [ {
+      "diagnostic" : "id",
+      "text" : "ec25d"
+    }, {
+      "diagnostic" : "target-count",
+      "text" : "2"
+    }, {
+      "diagnostic" : "port-id",
+      "text" : "a0833 d0a9d"
+    } ],
+    "derived" : {
+      "element_id" : "ec25d",
+      "element_kind" : "glyph"
+    }
+  } ],
+  "backend" : {
+    "language" : "java",
+    "implementation" : "sbgn-validator-java",
+    "implementation_version" : "0.1.0",
+    "schematron_engine" : "ph-schematron-schxslt2 10.0.1 / SchXslt2",
+    "xpath_engine" : "Saxon-HE",
+    "xpath_version" : "12.10",
+    "native_schematron" : true,
+    "profile_version" : "libSBGN-Schematron-Profile-1"
+  }
+}

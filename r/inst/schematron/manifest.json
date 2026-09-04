@@ -1,0 +1,18 @@
+{
+  "digest_algorithm": "SHA256(filename UTF-8 + NUL + file bytes), sorted by filename",
+  "files": {
+    "sbgn_af.sch": {
+      "sha256": "dfbcd588ddd93acd65c74771569f0c38783364ad60fb043b318a3250acc012f1"
+    },
+    "sbgn_er.sch": {
+      "sha256": "a9d340fa6952d333a4419025a78febff82c2609e40bae62bc03f4312bf9442b8"
+    },
+    "sbgn_pd.sch": {
+      "sha256": "171784ed6e1cf1c87477431d0e3f7159c5e3ecd3809b1008b8ab5bc1c4a2159c"
+    }
+  },
+  "ruleset": "libSBGN",
+  "ruleset_digest": "sha256:1a601e1f5ff4f02b53a329bf7cdcd7149eed1b537ea2964f4ed4cfa0a9d87c14",
+  "ruleset_version": "0.0.1",
+  "source_revision": null
+}

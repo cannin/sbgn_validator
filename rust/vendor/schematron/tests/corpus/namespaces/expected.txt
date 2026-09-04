@@ -1,0 +1,1 @@
+assert | /*[local-name()='invoice' and namespace-uri()='http://example.com/invoice'][1] | An invoice needs a total.

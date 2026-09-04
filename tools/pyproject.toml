@@ -1,0 +1,13 @@
+[project]
+name = "sbgn-validator-tools"
+version = "0.1.0"
+description = "Inventory and cross-runtime comparison tools"
+requires-python = ">=3.14"
+dependencies = []
+
+[dependency-groups]
+dev = ["pytest==8.4.2", "ruff==0.12.11"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py314"

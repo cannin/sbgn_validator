@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbgn xmlns="http://sbgn.org/libsbgn/0.2">
+  <map language="process description">
+    <glyph class="compartment" id="compartment_cytosol" compartmentOrder="1">
+      <label text="cytosol" />
+      <bbox x="20" y="20" w="1160" h="760" />
+    </glyph>
+
+    <glyph class="macromolecule" id="protein_cdk1" compartmentRef="compartment_cytosol">
+      <label text="CONFLICT: CDK1 | P06493 | kinase" />
+      <bbox x="70" y="60" w="280" h="60" />
+      <extension>
+        <geneList><gene symbol="CDK1" /></geneList>
+        <proteinList source="BioPAX">
+          <protein accession="P06493" hgncSymbol="CDK1">
+            <molecularFunction goId="GO:0004672" name="protein kinase activity" evidence="IDA,IEA,NAS" />
+          </protein>
+        </proteinList>
+        <semanticConflict expectedGoId="GO:0004721" expectedFunction="phosphoprotein phosphatase activity" observedGoId="GO:0004672" reason="CDK1 is falsely assigned as the catalyst of protein dephosphorylation" />
+      </extension>
+    </glyph>
+
+    <glyph class="macromolecule" id="protein_banf1" compartmentRef="compartment_cytosol">
+      <label text="BANF1 | O75531 | DNA binding" />
+      <bbox x="810" y="135" w="270" h="60" />
+      <extension>
+        <geneList><gene symbol="BANF1" /></geneList>
+        <proteinList source="BioPAX">
+          <protein accession="O75531" hgncSymbol="BANF1">
+            <molecularFunction goId="GO:0003677" name="DNA binding" evidence="IBA,IEA" />
+          </protein>
+        </proteinList>
+      </extension>
+    </glyph>
+
+    <glyph class="process" id="process_fake_dephosphorylation">
+      <label text="FAKE: CDK1 dephosphorylation">
+        <bbox x="385" y="115" w="235" h="24" />
+      </label>
+      <bbox x="490" y="155" w="20" h="20" />
+    </glyph>
+
+    <glyph class="macromolecule" id="protein_ctdnep1" compartmentRef="compartment_cytosol">
+      <label text="CONFLICT: CTDNEP1 | O95476 | phosphatase" />
+      <bbox x="70" y="265" w="300" h="60" />
+      <extension>
+        <geneList><gene symbol="CTDNEP1" /></geneList>
+        <proteinList source="BioPAX">
+          <protein accession="O95476" hgncSymbol="CTDNEP1">
+            <molecularFunction goId="GO:0004721" name="phosphoprotein phosphatase activity" evidence="IDA" />
+          </protein>
+        </proteinList>
+        <semanticConflict expectedGoId="GO:0004672" expectedFunction="protein kinase activity" observedGoId="GO:0004721" reason="CTDNEP1 is falsely assigned as the catalyst of protein phosphorylation" />
+      </extension>
+    </glyph>
+
+    <glyph class="macromolecule" id="protein_lmnb1" compartmentRef="compartment_cytosol">
+      <label text="LMNB1 | P20700 | nuclear lamina structure" />
+      <bbox x="790" y="340" w="320" h="60" />
+      <extension>
+        <geneList><gene symbol="LMNB1" /></geneList>
+        <proteinList source="BioPAX">
+          <protein accession="P20700" hgncSymbol="LMNB1">
+            <molecularFunction goId="GO:0160123" name="structural constituent of nuclear lamina" evidence="IEA,TAS" />
+          </protein>
+        </proteinList>
+      </extension>
+    </glyph>
+
+    <glyph class="process" id="process_fake_phosphorylation">
+      <label text="FAKE: CTDNEP1 phosphorylation">
+        <bbox x="380" y="320" w="245" h="24" />
+      </label>
+      <bbox x="490" y="360" w="20" h="20" />
+    </glyph>
+
+    <glyph class="macromolecule" id="protein_plk1" compartmentRef="compartment_cytosol">
+      <label text="SUPPORTED: PLK1 | P53350 | kinase" />
+      <bbox x="70" y="480" w="280" h="60" />
+      <extension>
+        <geneList><gene symbol="PLK1" /></geneList>
+        <proteinList source="BioPAX">
+          <protein accession="P53350" hgncSymbol="PLK1">
+            <molecularFunction goId="GO:0004672" name="protein kinase activity" evidence="IDA,IEA" />
+          </protein>
+        </proteinList>
+        <semanticAssessment status="supported" expectedGoId="GO:0004672" observedGoId="GO:0004672" />
+      </extension>
+    </glyph>
+
+    <glyph class="process" id="process_supported_phosphorylation">
+      <label text="SUPPORTED: protein phosphorylation">
+        <bbox x="430" y="470" w="260" h="24" />
+      </label>
+      <bbox x="545" y="510" w="20" h="20" />
+    </glyph>
+
+    <glyph class="macromolecule" id="protein_kmt5a" compartmentRef="compartment_cytosol">
+      <label text="SUPPORTED: KMT5A | Q9NQR1 | methyltransferase" />
+      <bbox x="70" y="655" w="350" h="60" />
+      <extension>
+        <geneList><gene symbol="KMT5A" /></geneList>
+        <proteinList source="BioPAX">
+          <protein accession="Q9NQR1" hgncSymbol="KMT5A">
+            <molecularFunction goId="GO:0016278" name="lysine N-methyltransferase activity" evidence="TAS" />
+          </protein>
+        </proteinList>
+        <semanticAssessment status="supported" expectedGoId="GO:0008168" observedGoId="GO:0016278" />
+      </extension>
+    </glyph>
+
+    <glyph class="process" id="process_supported_methylation">
+      <label text="SUPPORTED: histone methylation">
+        <bbox x="470" y="645" w="230" h="24" />
+      </label>
+      <bbox x="575" y="685" w="20" h="20" />
+    </glyph>
+
+    <arc class="consumption" id="arc_banf1_substrate" source="protein_banf1" target="process_fake_dephosphorylation">
+      <start x="810" y="165" />
+      <end x="510" y="165" />
+    </arc>
+    <arc class="catalysis" id="arc_cdk1_conflict" source="protein_cdk1" target="process_fake_dephosphorylation">
+      <start x="350" y="90" />
+      <end x="490" y="165" />
+    </arc>
+    <arc class="consumption" id="arc_lmnb1_substrate" source="protein_lmnb1" target="process_fake_phosphorylation">
+      <start x="790" y="370" />
+      <end x="510" y="370" />
+    </arc>
+    <arc class="catalysis" id="arc_ctdnep1_conflict" source="protein_ctdnep1" target="process_fake_phosphorylation">
+      <start x="370" y="295" />
+      <end x="490" y="370" />
+    </arc>
+    <arc class="catalysis" id="arc_plk1_supported" source="protein_plk1" target="process_supported_phosphorylation">
+      <start x="350" y="510" />
+      <end x="545" y="520" />
+    </arc>
+    <arc class="catalysis" id="arc_kmt5a_supported" source="protein_kmt5a" target="process_supported_methylation">
+      <start x="420" y="685" />
+      <end x="575" y="695" />
+    </arc>
+  </map>
+</sbgn>

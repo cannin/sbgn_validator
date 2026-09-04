@@ -1,0 +1,66 @@
+{
+  "schema" : "sbgn_af.sch",
+  "phase" : "basic",
+  "valid" : false,
+  "findings" : [ {
+    "id" : "af10110",
+    "type" : "failed-assert",
+    "role" : "error",
+    "flag" : null,
+    "location" : "/Q{http://sbgn.org/libsbgn/0.3}sbgn[1]/Q{http://sbgn.org/libsbgn/0.3}map[1]/Q{http://sbgn.org/libsbgn/0.3}arc[2]",
+    "test" : "     $port-class='and' or      $port-class='or' or     $port-class='not' or     $port-class='delay'",
+    "text" : "Incorrect target reference for arc with class \"logic arc\"",
+    "diagnostic_references" : [ {
+      "diagnostic" : "id",
+      "text" : "ad2f6"
+    }, {
+      "diagnostic" : "target",
+      "text" : "glyph3"
+    }, {
+      "diagnostic" : "target-class",
+      "text" : "perturbation"
+    }, {
+      "diagnostic" : "port-class",
+      "text" : ""
+    } ],
+    "derived" : {
+      "element_id" : "ad2f6",
+      "element_kind" : "arc"
+    }
+  }, {
+    "id" : "af10110",
+    "type" : "failed-assert",
+    "role" : "error",
+    "flag" : null,
+    "location" : "/Q{http://sbgn.org/libsbgn/0.3}sbgn[1]/Q{http://sbgn.org/libsbgn/0.3}map[1]/Q{http://sbgn.org/libsbgn/0.3}arc[3]",
+    "test" : "     $port-class='and' or      $port-class='or' or     $port-class='not' or     $port-class='delay'",
+    "text" : "Incorrect target reference for arc with class \"logic arc\"",
+    "diagnostic_references" : [ {
+      "diagnostic" : "id",
+      "text" : "dba2f"
+    }, {
+      "diagnostic" : "target",
+      "text" : "glyph3.1"
+    }, {
+      "diagnostic" : "target-class",
+      "text" : ""
+    }, {
+      "diagnostic" : "port-class",
+      "text" : "perturbation"
+    } ],
+    "derived" : {
+      "element_id" : "dba2f",
+      "element_kind" : "arc"
+    }
+  } ],
+  "backend" : {
+    "language" : "java",
+    "implementation" : "sbgn-validator-java",
+    "implementation_version" : "0.1.0",
+    "schematron_engine" : "ph-schematron-schxslt2 10.0.1 / SchXslt2",
+    "xpath_engine" : "Saxon-HE",
+    "xpath_version" : "12.10",
+    "native_schematron" : true,
+    "profile_version" : "libSBGN-Schematron-Profile-1"
+  }
+}

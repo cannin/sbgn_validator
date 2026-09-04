@@ -1,0 +1,6 @@
+python/sbgn_validator/_resources/schematron/* linguist-generated=true
+r/inst/schematron/* linguist-generated=true
+go/internal/rules/data/* linguist-generated=true
+rust/src/rules/data/* linguist-generated=true
+java/src/main/resources/schematron/* linguist-generated=true
+javascript/resources/schematron/* linguist-generated=true

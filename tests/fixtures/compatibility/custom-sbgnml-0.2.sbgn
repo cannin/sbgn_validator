@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbgn xmlns="http://sbgn.org/libsbgn/0.2"
+      xmlns:custom="urn:libsbgn-validator:test">
+  <map language="process description">
+    <custom:marker/>
+  </map>
+</sbgn>

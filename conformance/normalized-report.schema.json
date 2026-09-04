@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://libsbgn.org/schema/normalized-schematron-report-v2.json",
+  "title": "SVRL-aligned normalized SBGN Validator report",
+  "type": "object",
+  "required": ["schema", "phase", "valid", "findings"],
+  "properties": {
+    "schema": {"type": "string"},
+    "phase": {"type": "string"},
+    "valid": {"type": "boolean"},
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "type", "text", "diagnostic_references", "derived"],
+        "properties": {
+          "id": {"type": "string"},
+          "type": {"enum": ["failed-assert", "successful-report"]},
+          "role": {"type": ["string", "null"]},
+          "flag": {"type": ["string", "null"]},
+          "location": {"type": ["string", "null"]},
+          "test": {"type": ["string", "null"]},
+          "text": {"type": "string"},
+          "diagnostic_references": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["diagnostic", "text"],
+              "properties": {
+                "diagnostic": {"type": "string"},
+                "text": {"type": "string"}
+              },
+              "additionalProperties": false
+            }
+          },
+          "derived": {
+            "type": "object",
+            "required": ["element_id", "element_kind"],
+            "properties": {
+              "element_id": {"type": ["string", "null"]},
+              "element_kind": {"type": ["string", "null"]}
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "backend": {
+      "type": "object",
+      "required": ["language", "native_schematron", "profile_version"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

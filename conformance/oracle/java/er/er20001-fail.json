@@ -1,0 +1,32 @@
+{
+  "schema" : "sbgn_er.sch",
+  "phase" : "basic",
+  "valid" : false,
+  "findings" : [ {
+    "id" : "er20001",
+    "type" : "failed-assert",
+    "role" : "error",
+    "flag" : null,
+    "location" : "/Q{http://sbgn.org/libsbgn/0.3}sbgn[1]/Q{http://sbgn.org/libsbgn/0.3}map[1]/Q{http://sbgn.org/libsbgn/0.3}glyph[5]",
+    "test" : "$parent-tag-name='arcgroup'",
+    "text" : "Parent of glyph with type interaction must be arcgroup.",
+    "diagnostic_references" : [ {
+      "diagnostic" : "id",
+      "text" : "g4"
+    } ],
+    "derived" : {
+      "element_id" : "g4",
+      "element_kind" : "glyph"
+    }
+  } ],
+  "backend" : {
+    "language" : "java",
+    "implementation" : "sbgn-validator-java",
+    "implementation_version" : "0.1.0",
+    "schematron_engine" : "ph-schematron-schxslt2 10.0.1 / SchXslt2",
+    "xpath_engine" : "Saxon-HE",
+    "xpath_version" : "12.10",
+    "native_schematron" : true,
+    "profile_version" : "libSBGN-Schematron-Profile-1"
+  }
+}

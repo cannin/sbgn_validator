@@ -1,0 +1,38 @@
+{
+  "schema" : "sbgn_af.sch",
+  "phase" : "basic",
+  "valid" : false,
+  "findings" : [ {
+    "id" : "af10113",
+    "type" : "failed-assert",
+    "role" : "error",
+    "flag" : null,
+    "location" : "/Q{http://sbgn.org/libsbgn/0.3}sbgn[1]/Q{http://sbgn.org/libsbgn/0.3}map[1]/Q{http://sbgn.org/libsbgn/0.3}arc[1]",
+    "test" : "     $target-class='tag' or     $target-class='submap' or     $target-class='terminal'",
+    "text" : "Incorrect target reference for arc with class \"equivalence arc\"",
+    "diagnostic_references" : [ {
+      "diagnostic" : "id",
+      "text" : "arc0"
+    }, {
+      "diagnostic" : "target",
+      "text" : "glyph0"
+    }, {
+      "diagnostic" : "target-class",
+      "text" : "biological activity"
+    } ],
+    "derived" : {
+      "element_id" : "arc0",
+      "element_kind" : "arc"
+    }
+  } ],
+  "backend" : {
+    "language" : "java",
+    "implementation" : "sbgn-validator-java",
+    "implementation_version" : "0.1.0",
+    "schematron_engine" : "ph-schematron-schxslt2 10.0.1 / SchXslt2",
+    "xpath_engine" : "Saxon-HE",
+    "xpath_version" : "12.10",
+    "native_schematron" : true,
+    "profile_version" : "libSBGN-Schematron-Profile-1"
+  }
+}
