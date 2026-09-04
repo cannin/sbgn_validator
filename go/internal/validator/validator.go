@@ -693,7 +693,8 @@ func (schema *Schema) Validate(ctx context.Context, documentPath string) (Report
 					}
 					findings = append(findings, Finding{
 						ID: pointer(check.id), Type: findingType, Role: pointer(check.role),
-						Flag: pointer(check.flag), Location: location(node), Test: check.testSource,
+						Flag: pointer(check.flag), Location: location(node),
+						Test: strings.Join(strings.Fields(check.testSource), " "),
 						Text: message, DiagnosticReferences: diagnosticReferences,
 						Derived: DerivedIdentity{
 							ElementID: pointer(elementID), ElementKind: elementKind,
@@ -733,7 +734,7 @@ func (schema *Schema) Validate(ctx context.Context, documentPath string) (Report
 		Schema: schema.name, Phase: schema.phase, Valid: len(findings) == 0, Findings: findings,
 		Backend: &BackendInfo{
 			Language: "go", Implementation: "sbgn-validator-go",
-			ImplementationVersion: "0.1.0", SchematronEngine: "project-direct-interpreter",
+			ImplementationVersion: "0.1.1", SchematronEngine: "project-direct-interpreter",
 			XPathEngine: "helium/xpath3", XPathVersion: "3.1",
 			ProfileVersion: profileVersion, NativeSchematron: true,
 		},

@@ -9,6 +9,7 @@ SEMANTIC_FIELDS = (
     "type",
     "role",
     "flag",
+    "test",
     "text",
     "diagnostic_references",
     "derived",

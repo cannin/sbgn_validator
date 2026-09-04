@@ -318,7 +318,7 @@ impl Validator {
                     role: finding.role.clone(),
                     flag: finding.flag.clone(),
                     location: Some(finding.location.clone()),
-                    test: Some(finding.test.clone()),
+                    test: Some(normalize_whitespace(&finding.test)),
                     text: normalize_text(&finding.text),
                     diagnostic_references,
                     derived: DerivedIdentity {
@@ -350,7 +350,7 @@ impl Validator {
             backend: Some(BackendInfo {
                 language: "rust",
                 implementation: "sbgn-validator-rust",
-                implementation_version: "0.1.0",
+                implementation_version: "0.1.1",
                 schematron_engine: "schematron 0.5.1",
                 xpath_engine: "schematron native XPath",
                 xpath_version: "1.0 plus documented 2.0 subset",
@@ -421,6 +421,10 @@ fn normalize_text(value: &str) -> String {
         })
         .collect::<Vec<_>>()
         .join(" ")
+}
+
+fn normalize_whitespace(value: &str) -> String {
+    value.split_whitespace().collect::<Vec<_>>().join(" ")
 }
 
 fn element_kind(location: &str) -> Option<String> {

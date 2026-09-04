@@ -46,6 +46,14 @@ def test_legacy_policy_runs_semantic_rules() -> None:
     assert {"pd10102", "pd10132", "pd10141"} <= {
         finding["id"] for finding in compatible["findings"]
     }
+    expected_test = (
+        "$port-class='process' or $port-class='omitted process' or "
+        "$port-class='uncertain process' or $port-class='association' or "
+        "$port-class='dissociation' or $port-class='phenotype'"
+    )
+    assert {
+        finding["test"] for finding in compatible["findings"] if finding["id"] == "pd10102"
+    } == {expected_test}
 
 
 @pytest.mark.parametrize(

@@ -67,6 +67,21 @@ test_that("legacy policy runs semantic rules", {
   expect_false(compatible$valid)
   rule_ids <- vapply(compatible$findings, `[[`, character(1), "id")
   expect_true(all(c("pd10102", "pd10132", "pd10141") %in% rule_ids))
+  expected_test <- paste(
+    "$port-class='process' or $port-class='omitted process' or",
+    "$port-class='uncertain process' or $port-class='association' or",
+    "$port-class='dissociation' or $port-class='phenotype'"
+  )
+  pd10102_tests <- vapply(
+    Filter(
+      function(finding) identical(finding$id, "pd10102"),
+      compatible$findings
+    ),
+    `[[`,
+    character(1),
+    "test"
+  )
+  expect_identical(unique(pd10102_tests), expected_test)
 })
 
 test_that("namespace policy rejects unsupported namespaces", {

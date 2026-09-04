@@ -14,7 +14,8 @@ upstream rule corpus itself exercises nested-predicate `current()`,
 Comparison ignores backend identity and processor-specific locations but
 compares validity and sorted semantic finding identity: finding ID, SVRL
 finding type, role, flag, derived element ID/kind, normalized text, and ordered
-diagnostic references.
+diagnostic references. The Schematron `test` expression is also compared after
+each backend trims it and collapses every whitespace run to one space.
 
 Strict namespace failure is tested as the Schematron failed assertion
 `sbgn-namespace-0.3`. Legacy fixtures test exact 0.2 acceptance, unchanged 0.3

@@ -29,6 +29,12 @@ final class NamespacePolicyTest {
         org.junit.jupiter.api.Assertions.assertTrue(ids.contains("pd10102"));
         org.junit.jupiter.api.Assertions.assertTrue(ids.contains("pd10132"));
         org.junit.jupiter.api.Assertions.assertTrue(ids.contains("pd10141"));
+        String expectedTest = "$port-class='process' or $port-class='omitted process' or "
+                + "$port-class='uncertain process' or $port-class='association' or "
+                + "$port-class='dissociation' or $port-class='phenotype'";
+        compatible.findings().stream()
+                .filter(finding -> "pd10102".equals(finding.id()))
+                .forEach(finding -> assertEquals(expectedTest, finding.test()));
     }
 
     @Test

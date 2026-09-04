@@ -8,7 +8,7 @@
     "role" : "error",
     "flag" : null,
     "location" : "/Q{http://sbgn.org/libsbgn/0.3}sbgn[1]/Q{http://sbgn.org/libsbgn/0.3}map[1]/Q{http://sbgn.org/libsbgn/0.3}arc[1]",
-    "test" : "     $source-class='biological activity' or      $source-class='perturbation' or     $port-class='and' or      $port-class='or' or       $port-class='not' or      $port-class='delay'",
+    "test" : "$source-class='biological activity' or $source-class='perturbation' or $port-class='and' or $port-class='or' or $port-class='not' or $port-class='delay'",
     "text" : "Incorrect source reference for influence arc",
     "diagnostic_references" : [ {
       "diagnostic" : "id",
@@ -33,7 +33,7 @@
     "role" : "error",
     "flag" : null,
     "location" : "/Q{http://sbgn.org/libsbgn/0.3}sbgn[1]/Q{http://sbgn.org/libsbgn/0.3}map[1]/Q{http://sbgn.org/libsbgn/0.3}glyph[3]",
-    "test" : "     $class='biological activity' or      $class='and' or      $class='or' or     $class='not' or     $class='delay' or     $class='tag' or     $class='submap' or     $class='terminal' or     $class='unit of information' or     $class='compartment' or     $class='perturbation' or     $class='phenotype'     ",
+    "test" : "$class='biological activity' or $class='and' or $class='or' or $class='not' or $class='delay' or $class='tag' or $class='submap' or $class='terminal' or $class='unit of information' or $class='compartment' or $class='perturbation' or $class='phenotype'",
     "text" : "This glyph class is not allowed in Activity Flow",
     "diagnostic_references" : [ {
       "diagnostic" : "id",
@@ -52,7 +52,7 @@
     "role" : "error",
     "flag" : null,
     "location" : "/Q{http://sbgn.org/libsbgn/0.3}sbgn[1]/Q{http://sbgn.org/libsbgn/0.3}map[1]/Q{http://sbgn.org/libsbgn/0.3}arc[2]",
-    "test" : "     $port-class='and' or      $port-class='or' or     $port-class='not' or     $port-class='delay'",
+    "test" : "$port-class='and' or $port-class='or' or $port-class='not' or $port-class='delay'",
     "text" : "Incorrect target reference for arc with class \"logic arc\"",
     "diagnostic_references" : [ {
       "diagnostic" : "id",
@@ -77,7 +77,7 @@
     "role" : "error",
     "flag" : null,
     "location" : "/Q{http://sbgn.org/libsbgn/0.3}sbgn[1]/Q{http://sbgn.org/libsbgn/0.3}map[1]/Q{http://sbgn.org/libsbgn/0.3}arc[3]",
-    "test" : "     $port-class='and' or      $port-class='or' or     $port-class='not' or     $port-class='delay'",
+    "test" : "$port-class='and' or $port-class='or' or $port-class='not' or $port-class='delay'",
     "text" : "Incorrect target reference for arc with class \"logic arc\"",
     "diagnostic_references" : [ {
       "diagnostic" : "id",
@@ -100,7 +100,7 @@
   "backend" : {
     "language" : "java",
     "implementation" : "sbgn-validator-java",
-    "implementation_version" : "0.1.0",
+    "implementation_version" : "0.1.1",
     "schematron_engine" : "ph-schematron-schxslt2 10.0.1 / SchXslt2",
     "xpath_engine" : "Saxon-HE",
     "xpath_version" : "12.10",

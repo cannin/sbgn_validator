@@ -8,6 +8,18 @@ from pathlib import Path
 EXPECTED_RULE = re.compile(r"^((?:af|er|pd)\d+)-(pass|fail)", re.IGNORECASE)
 
 
+def is_normalized_test(value: object) -> bool:
+    """Return whether a finding test uses single-space whitespace.
+
+    Args:
+        value: Report field value.
+
+    Returns:
+        True for null or a normalized test expression.
+    """
+    return value is None or (isinstance(value, str) and value == " ".join(value.split()))
+
+
 def main() -> None:
     """Verify every manifest case and its expected focal rule behavior."""
     parser = argparse.ArgumentParser(description=__doc__)
@@ -24,6 +36,12 @@ def main() -> None:
                 errors.append(f"RULE_MISSING oracle={path}")
             else:
                 report = json.loads(path.read_text())
+                for finding in report["findings"]:
+                    if not is_normalized_test(finding.get("test")):
+                        errors.append(
+                            f"TEST_WHITESPACE_NOT_NORMALIZED fixture={case['id']} "
+                            f"rule={finding.get('id')}"
+                        )
                 feature = case["profile_feature"]
                 if feature == "current-time" and "<CURRENT_TIME>" not in json.dumps(report):
                     errors.append(f"XPATH_RESULT_MISMATCH fixture={case['id']}")
@@ -52,6 +70,12 @@ def main() -> None:
             errors.append(f"RULE_MISSING oracle={path}")
             continue
         report = json.loads(path.read_text())
+        for finding in report["findings"]:
+            if not is_normalized_test(finding.get("test")):
+                errors.append(
+                    f"TEST_WHITESPACE_NOT_NORMALIZED fixture={case['id']} "
+                    f"rule={finding.get('id')}"
+                )
         found = {finding["id"].lower() for finding in report["findings"]}
         if expectation == "fail" and rule_id not in found:
             errors.append(f"RULE_MISSING fixture={case['id']} rule={rule_id}")

@@ -106,6 +106,10 @@ function normalizeText(value) {
     );
 }
 
+function normalizeWhitespace(value) {
+    return value == null ? null : value.replace(/\s+/g, " ").trim();
+}
+
 function canonicalLocation(node) {
     const segments = [];
     for (let current = node; current && current.nodeType === 1; current = current.parentNode) {
@@ -227,7 +231,7 @@ export class SchematronValidator {
                 role: check.role ?? null,
                 flag: check.flag ?? null,
                 location: canonicalLocation(result.context),
-                test: check.test ?? null,
+                test: normalizeWhitespace(check.test),
                 text: normalizeText(result.message ?? ""),
                 diagnostic_references: diagnosticReferences,
                 derived: {
@@ -248,7 +252,7 @@ export class SchematronValidator {
             backend: {
                 language: "javascript",
                 implementation: "sbgn-validator-javascript",
-                implementation_version: "0.1.0",
+                implementation_version: "0.1.1",
                 schematron_engine: "node-schematron 2.1.0",
                 xpath_engine: "FontoXPath",
                 xpath_version: "3.34.0",

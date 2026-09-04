@@ -8,7 +8,7 @@
     "role" : "error",
     "flag" : null,
     "location" : "/Q{http://sbgn.org/libsbgn/0.3}sbgn[1]/Q{http://sbgn.org/libsbgn/0.3}map[1]/Q{http://sbgn.org/libsbgn/0.3}arc[3]",
-    "test" : "$port-class='and' or     $port-class='or' or     $port-class='not'",
+    "test" : "$port-class='and' or $port-class='or' or $port-class='not'",
     "text" : "Arc with class logic arc must have target reference to a logical operator",
     "diagnostic_references" : [ {
       "diagnostic" : "id",
@@ -30,7 +30,7 @@
     "role" : "error",
     "flag" : null,
     "location" : "/Q{http://sbgn.org/libsbgn/0.3}sbgn[1]/Q{http://sbgn.org/libsbgn/0.3}map[1]/Q{http://sbgn.org/libsbgn/0.3}arc[3]",
-    "test" : "     $port-class='and' or      $port-class='or' or     $port-class='not'",
+    "test" : "$port-class='and' or $port-class='or' or $port-class='not'",
     "text" : "logic Arc must be connected to either 'OR', 'AND' or 'NOT'",
     "diagnostic_references" : [ {
       "diagnostic" : "id",
@@ -53,7 +53,7 @@
   "backend" : {
     "language" : "java",
     "implementation" : "sbgn-validator-java",
-    "implementation_version" : "0.1.0",
+    "implementation_version" : "0.1.1",
     "schematron_engine" : "ph-schematron-schxslt2 10.0.1 / SchXslt2",
     "xpath_engine" : "Saxon-HE",
     "xpath_version" : "12.10",

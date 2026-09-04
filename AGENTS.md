@@ -31,7 +31,7 @@ mvn -f java/pom.xml test package
 (cd go && go test ./... && go vet ./...)
 (cd rust && cargo fmt --check && cargo test)
 R CMD build r
-R CMD check --no-manual sbgnvalidator_0.1.0.tar.gz
+R CMD check --no-manual sbgnvalidator_0.1.1.tar.gz
 ```
 
 ## Architecture boundaries
@@ -46,6 +46,9 @@ R CMD check --no-manual sbgnvalidator_0.1.0.tar.gz
 - Unsupported Schematron or XPath constructs must fail explicitly.
 - Keep XML structural validation separate from semantic Schematron validation.
 - Preserve deterministic normalized report ordering and clock normalization.
+- Normalize each reported Schematron `test` expression by trimming it and
+  collapsing all whitespace runs to one ASCII space. Never change the
+  canonical XPath expression itself.
 
 ## Legacy SBGN-ML 0.2 compatibility
 
@@ -111,6 +114,11 @@ cases from isolated built artifacts and compare all six built-in digests.
 - Do not silently update committed Java oracle files during ordinary tests.
 
 ## Release process
+
+The public upstream repository is
+`https://github.com/cannin/sbgn_validator`. Release 0.1.1 established the
+cross-language normalized-`test` contract; all six backends and packaged
+artifact checks must preserve it.
 
 Keep `VERSION`, all six ecosystem package versions, generated lockfiles, and
 reported backend implementation versions synchronized. The Schematron ruleset

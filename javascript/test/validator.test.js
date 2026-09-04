@@ -39,6 +39,12 @@ test("legacy policy runs semantic rules", () => {
     assert.equal(compatible.valid, false);
     const ids = new Set(compatible.findings.map((finding) => finding.id));
     for (const id of ["pd10102", "pd10132", "pd10141"]) assert(ids.has(id));
+    const expectedTest = "$port-class='process' or $port-class='omitted process' or "
+        + "$port-class='uncertain process' or $port-class='association' or "
+        + "$port-class='dissociation' or $port-class='phenotype'";
+    for (const finding of compatible.findings.filter((item) => item.id === "pd10102")) {
+        assert.equal(finding.test, expectedTest);
+    }
 });
 
 test("namespace policy accepts only SBGN-ML 0.3 and explicit legacy 0.2", () => {

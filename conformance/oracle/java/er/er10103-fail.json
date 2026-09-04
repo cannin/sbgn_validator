@@ -8,7 +8,7 @@
     "role" : "error",
     "flag" : null,
     "location" : "/Q{http://sbgn.org/libsbgn/0.3}sbgn[1]/Q{http://sbgn.org/libsbgn/0.3}map[1]/Q{http://sbgn.org/libsbgn/0.3}arc[1]",
-    "test" : "     $class='entity' or      $class='outcome' or      $class='unit of information' or     $class='interaction'",
+    "test" : "$class='entity' or $class='outcome' or $class='unit of information' or $class='interaction'",
     "text" : "Incorrect source reference for arc with class \"interaction\"",
     "diagnostic_references" : [ {
       "diagnostic" : "id",
@@ -28,7 +28,7 @@
   "backend" : {
     "language" : "java",
     "implementation" : "sbgn-validator-java",
-    "implementation_version" : "0.1.0",
+    "implementation_version" : "0.1.1",
     "schematron_engine" : "ph-schematron-schxslt2 10.0.1 / SchXslt2",
     "xpath_engine" : "Saxon-HE",
     "xpath_version" : "12.10",

@@ -1,7 +1,7 @@
 {
   "backend": {
     "implementation": "sbgn-validator-python",
-    "implementation_version": "0.1.0",
+    "implementation_version": "0.1.1",
     "language": "python",
     "native_schematron": true,
     "profile_version": "libSBGN-Schematron-Profile-1",

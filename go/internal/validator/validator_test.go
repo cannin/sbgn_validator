@@ -58,6 +58,14 @@ func TestLegacyPolicyRunsSemanticRules(t *testing.T) {
 			t.Fatalf("expected %s finding, got %#v", ruleID, report.Findings)
 		}
 	}
+	expectedTest := "$port-class='process' or $port-class='omitted process' or " +
+		"$port-class='uncertain process' or $port-class='association' or " +
+		"$port-class='dissociation' or $port-class='phenotype'"
+	for _, finding := range report.Findings {
+		if finding.ID != nil && *finding.ID == "pd10102" && finding.Test != expectedTest {
+			t.Fatalf("test expression was not normalized: %q", finding.Test)
+		}
+	}
 }
 
 func TestNamespacePolicyRejectsUnsupportedNamespaces(t *testing.T) {

@@ -8,7 +8,7 @@
     "role" : "error",
     "flag" : null,
     "location" : "/Q{http://sbgn.org/libsbgn/0.2}sbgn[1]/Q{http://sbgn.org/libsbgn/0.2}map[1]/Q{http://sbgn.org/libsbgn/0.2}arc[1]",
-    "test" : "     $port-class='process' or      $port-class='omitted process' or     $port-class='uncertain process' or     $port-class='association' or     $port-class='dissociation' or     $port-class='phenotype'",
+    "test" : "$port-class='process' or $port-class='omitted process' or $port-class='uncertain process' or $port-class='association' or $port-class='dissociation' or $port-class='phenotype'",
     "text" : "Arc with class consumption must have target reference to port on glyph with PN classes",
     "diagnostic_references" : [ {
       "diagnostic" : "id",
@@ -30,7 +30,7 @@
     "role" : "error",
     "flag" : null,
     "location" : "/Q{http://sbgn.org/libsbgn/0.2}sbgn[1]/Q{http://sbgn.org/libsbgn/0.2}map[1]/Q{http://sbgn.org/libsbgn/0.2}arc[3]",
-    "test" : "     $port-class='process' or      $port-class='omitted process' or     $port-class='uncertain process' or     $port-class='association' or     $port-class='dissociation' or     $port-class='phenotype'",
+    "test" : "$port-class='process' or $port-class='omitted process' or $port-class='uncertain process' or $port-class='association' or $port-class='dissociation' or $port-class='phenotype'",
     "text" : "Arc with class consumption must have target reference to port on glyph with PN classes",
     "diagnostic_references" : [ {
       "diagnostic" : "id",
@@ -190,7 +190,7 @@
   "backend" : {
     "language" : "java",
     "implementation" : "sbgn-validator-java",
-    "implementation_version" : "0.1.0",
+    "implementation_version" : "0.1.1",
     "schematron_engine" : "ph-schematron-schxslt2 10.0.1 / SchXslt2",
     "xpath_engine" : "Saxon-HE",
     "xpath_version" : "12.10",

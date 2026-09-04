@@ -42,6 +42,17 @@ fn legacy_policy_runs_semantic_rules() {
     assert!(ids.contains(&"pd10102"));
     assert!(ids.contains(&"pd10132"));
     assert!(ids.contains(&"pd10141"));
+    let expected_test = "$port-class='process' or $port-class='omitted process' or \
+        $port-class='uncertain process' or $port-class='association' or \
+        $port-class='dissociation' or $port-class='phenotype'";
+    for finding in value["findings"]
+        .as_array()
+        .unwrap()
+        .iter()
+        .filter(|finding| finding["id"] == "pd10102")
+    {
+        assert_eq!(finding["test"], expected_test);
+    }
 }
 
 #[test]

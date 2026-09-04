@@ -243,7 +243,7 @@ class SchematronValidator:
             "backend": {
                 "language": "python",
                 "implementation": "sbgn-validator-python",
-                "implementation_version": "0.1.0",
+                "implementation_version": "0.1.1",
                 "schematron_engine": "pyschematron 1.2.1",
                 "xpath_engine": "elementpath",
                 "xpath_version": "5.0.4",
@@ -341,7 +341,7 @@ def _normalize_svrl(
                     "role": finding.get("role") or rule_metadata.get("role"),
                     "flag": finding.get("flag") or rule_metadata.get("flag"),
                     "location": location,
-                    "test": finding.get("test"),
+                    "test": _normalize_whitespace(finding.get("test")),
                     "text": text,
                     "diagnostic_references": diagnostic_references,
                     "derived": {
@@ -359,3 +359,15 @@ def _normalize_svrl(
             item["text"],
         ),
     )
+
+
+def _normalize_whitespace(value: str | None) -> str | None:
+    """Collapse XML whitespace in an optional report field.
+
+    Args:
+        value: Raw field value, or None when the field is absent.
+
+    Returns:
+        The trimmed value with each whitespace run replaced by one space.
+    """
+    return None if value is None else " ".join(value.split())

@@ -8,7 +8,7 @@
     "role" : "error",
     "flag" : null,
     "location" : "/Q{http://sbgn.org/libsbgn/0.3}sbgn[1]/Q{http://sbgn.org/libsbgn/0.3}map[1]/Q{http://sbgn.org/libsbgn/0.3}arc[1]",
-    "test" : "     $class='macromolecule' or      $class='macromolecule multimer' or     $class='simple chemical' or     $class='unspecified entity' or      $class='complex multimer' or       $class='complex' or      $class='nucleic acid feature' or      $class='simple chemical multimer' or      $class='nucleic acid feature multimer' or      $class='source and sink'",
+    "test" : "$class='macromolecule' or $class='macromolecule multimer' or $class='simple chemical' or $class='unspecified entity' or $class='complex multimer' or $class='complex' or $class='nucleic acid feature' or $class='simple chemical multimer' or $class='nucleic acid feature multimer' or $class='source and sink'",
     "text" : "Arc with class consumption must have source reference to glyph of EPN classes",
     "diagnostic_references" : [ {
       "diagnostic" : "id",
@@ -30,7 +30,7 @@
     "role" : "error",
     "flag" : null,
     "location" : "/Q{http://sbgn.org/libsbgn/0.3}sbgn[1]/Q{http://sbgn.org/libsbgn/0.3}map[1]/Q{http://sbgn.org/libsbgn/0.3}arc[1]",
-    "test" : "     $port-class='process' or      $port-class='omitted process' or     $port-class='uncertain process' or     $port-class='association' or     $port-class='dissociation' or     $port-class='phenotype'",
+    "test" : "$port-class='process' or $port-class='omitted process' or $port-class='uncertain process' or $port-class='association' or $port-class='dissociation' or $port-class='phenotype'",
     "text" : "Arc with class consumption must have target reference to port on glyph with PN classes",
     "diagnostic_references" : [ {
       "diagnostic" : "id",
@@ -50,7 +50,7 @@
   "backend" : {
     "language" : "java",
     "implementation" : "sbgn-validator-java",
-    "implementation_version" : "0.1.0",
+    "implementation_version" : "0.1.1",
     "schematron_engine" : "ph-schematron-schxslt2 10.0.1 / SchXslt2",
     "xpath_engine" : "Saxon-HE",
     "xpath_version" : "12.10",

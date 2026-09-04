@@ -8,7 +8,7 @@
     "role" : "error",
     "flag" : null,
     "location" : "/Q{http://sbgn.org/libsbgn/0.3}sbgn[1]/Q{http://sbgn.org/libsbgn/0.3}map[1]/Q{http://sbgn.org/libsbgn/0.3}glyph[2]",
-    "test" : "//sbgn:arc[(      @class = 'production' or      @class = 'consumption' or            @class = 'modulation' or       @class = 'stimulation' or       @class = 'catalysis' or       @class = 'inhibition' or       @class = 'necessary stimulation' or       @class = 'logic arc' or       @class = 'equivalence arc' or       @class = 'production') and (@source = $id or @target = $id)]",
+    "test" : "//sbgn:arc[( @class = 'production' or @class = 'consumption' or @class = 'modulation' or @class = 'stimulation' or @class = 'catalysis' or @class = 'inhibition' or @class = 'necessary stimulation' or @class = 'logic arc' or @class = 'equivalence arc' or @class = 'production') and (@source = $id or @target = $id)]",
     "text" : "EPNs should not be orphaned (i.e. they must be associated with at least one arc.)",
     "diagnostic_references" : [ {
       "diagnostic" : "id",
@@ -27,7 +27,7 @@
     "role" : "error",
     "flag" : null,
     "location" : "/Q{http://sbgn.org/libsbgn/0.3}sbgn[1]/Q{http://sbgn.org/libsbgn/0.3}map[1]/Q{http://sbgn.org/libsbgn/0.3}glyph[3]",
-    "test" : "//sbgn:arc[(      @class = 'production' or      @class = 'consumption' or            @class = 'modulation' or       @class = 'stimulation' or       @class = 'catalysis' or       @class = 'inhibition' or       @class = 'necessary stimulation' or       @class = 'logic arc' or       @class = 'equivalence arc' or       @class = 'production') and (@source = $id or @target = $id)]",
+    "test" : "//sbgn:arc[( @class = 'production' or @class = 'consumption' or @class = 'modulation' or @class = 'stimulation' or @class = 'catalysis' or @class = 'inhibition' or @class = 'necessary stimulation' or @class = 'logic arc' or @class = 'equivalence arc' or @class = 'production') and (@source = $id or @target = $id)]",
     "text" : "EPNs should not be orphaned (i.e. they must be associated with at least one arc.)",
     "diagnostic_references" : [ {
       "diagnostic" : "id",
@@ -44,7 +44,7 @@
   "backend" : {
     "language" : "java",
     "implementation" : "sbgn-validator-java",
-    "implementation_version" : "0.1.0",
+    "implementation_version" : "0.1.1",
     "schematron_engine" : "ph-schematron-schxslt2 10.0.1 / SchXslt2",
     "xpath_engine" : "Saxon-HE",
     "xpath_version" : "12.10",

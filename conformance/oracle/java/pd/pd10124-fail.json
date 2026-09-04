@@ -8,7 +8,7 @@
     "role" : "error",
     "flag" : null,
     "location" : "/Q{http://sbgn.org/libsbgn/0.3}sbgn[1]/Q{http://sbgn.org/libsbgn/0.3}map[1]/Q{http://sbgn.org/libsbgn/0.3}arc[6]",
-    "test" : "     $class='unspecified entity' or      $class='simple chemical' or     $class='macromolecule' or      $class='macromolecule multimer' or     $class='nucleic acid feature' or      $class='simple chemical multimer' or      $class='nucleic acid feature multimer' or      $class='complex' or      $class='complex multimer' or     $port-class='and' or     $port-class='or' or     $port-class='not'",
+    "test" : "$class='unspecified entity' or $class='simple chemical' or $class='macromolecule' or $class='macromolecule multimer' or $class='nucleic acid feature' or $class='simple chemical multimer' or $class='nucleic acid feature multimer' or $class='complex' or $class='complex multimer' or $port-class='and' or $port-class='or' or $port-class='not'",
     "text" : "Arc with class logic arc must have source reference to glyph of EPN classes, or logic gates",
     "diagnostic_references" : [ {
       "diagnostic" : "id",
@@ -28,7 +28,7 @@
   "backend" : {
     "language" : "java",
     "implementation" : "sbgn-validator-java",
-    "implementation_version" : "0.1.0",
+    "implementation_version" : "0.1.1",
     "schematron_engine" : "ph-schematron-schxslt2 10.0.1 / SchXslt2",
     "xpath_engine" : "Saxon-HE",
     "xpath_version" : "12.10",

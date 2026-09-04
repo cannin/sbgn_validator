@@ -1,7 +1,7 @@
 Package: sbgnvalidator
 Type: Package
 Title: SBGN Validator
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: person("libSBGN", "Contributors", role = c("aut", "cre"), email = "maintainers@libsbgn.org")
 Description: Executes the original libSBGN Schematron rules through a small
     direct interpreter backed by libxml2 XPath.

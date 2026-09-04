@@ -20,7 +20,7 @@ public record BackendInfo(
         return new BackendInfo(
                 "java",
                 "sbgn-validator-java",
-                "0.1.0",
+                "0.1.1",
                 "ph-schematron-schxslt2 10.0.1 / SchXslt2",
                 "Saxon-HE",
                 "12.10",

@@ -591,7 +591,7 @@ Rcpp::List validate_schema(const CompiledSchema& schema, const std::string& docu
                         Rcpp::_["role"] = check.role.empty() ? R_NilValue : Rcpp::wrap(check.role),
                         Rcpp::_["flag"] = check.flag.empty() ? R_NilValue : Rcpp::wrap(check.flag),
                         Rcpp::_["location"] = canonical_location(node),
-                        Rcpp::_["test"] = check.test.source(),
+                        Rcpp::_["test"] = normalize_space(check.test.source()),
                         Rcpp::_["text"] = render_message(check.message, context.get()),
                         Rcpp::_["diagnostic_references"] = diagnostic_references,
                         Rcpp::_["derived"] = Rcpp::List::create(
@@ -628,7 +628,7 @@ Rcpp::List validate_schema(const CompiledSchema& schema, const std::string& docu
         Rcpp::_["valid"] = findings.empty(), Rcpp::_["findings"] = Rcpp::wrap(findings),
         Rcpp::_["backend"] = Rcpp::List::create(
             Rcpp::_["language"] = "r", Rcpp::_["implementation"] = "sbgn-validator-r",
-            Rcpp::_["implementation_version"] = "0.1.0",
+            Rcpp::_["implementation_version"] = "0.1.1",
             Rcpp::_["schematron_engine"] = "project-direct-interpreter",
             Rcpp::_["xpath_engine"] = "libxml2",
             Rcpp::_["xpath_version"] = "1.0 plus libSBGN profile extensions",

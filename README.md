@@ -3,7 +3,7 @@
 Cross-language semantic validation of SBGN-ML using the original libSBGN
 Schematron files as the single executable rule source.
 
-Current validator version: **0.1.0**. The bundled ruleset has its own version
+Current validator version: **0.1.1**. The bundled ruleset has its own version
 and digest, reported by `--rules-info`.
 
 The project provides independent implementations for Java, JavaScript, R,
@@ -21,6 +21,10 @@ All six implementations produce equivalent normalized results for the shared
 - five legacy compatibility cases covering valid AF/ER/PD, invalid PD semantic
   findings, and unchanged 0.3 behavior
 - all three schemas: `sbgn_af.sch`, `sbgn_er.sch`, and `sbgn_pd.sch`
+
+Reported Schematron `test` expressions are trimmed and every whitespace run is
+collapsed to one space. This keeps JSON output readable without changing the
+expression that was evaluated.
 
 The executable schemas remain in `validation/rules/`; they contain the upstream
 rules plus one shared namespace guard and do not translate individual SBGN
@@ -201,7 +205,7 @@ Validate one document and write the normalized JSON report to standard output:
 
 ```sh
 mvn -q -f java/pom.xml package
-java -jar java/target/sbgn-validator-0.1.0.jar \
+java -jar java/target/sbgn-validator-0.1.1.jar \
   tests/fixtures/error-test-files/PD/pd10110-fail-1.sbgn \
   --phase basic
 ```
@@ -227,7 +231,7 @@ node javascript/src/cli.js \
 ```sh
 R CMD INSTALL r
 R CMD build r
-R CMD check --no-manual sbgnvalidator_0.1.0.tar.gz
+R CMD check --no-manual sbgnvalidator_0.1.1.tar.gz
 ```
 
 ```sh

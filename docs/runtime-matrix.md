@@ -6,12 +6,12 @@ means that the backend compiled the original three schemas and matched all
 
 | Runtime | Version | Engine | Strategy | Corpus equivalence |
 |---|---|---|---|---|
-| java | 0.1.0 | ph-schematron-schxslt2 10.0.1 + SchXslt2 1.11.2 + Saxon-HE 12.10 | reference Schematron-to-XSLT pipeline | PASS |
-| javascript | 0.1.0 | node-schematron 2.1.0 + FontoXPath 3.34.0 | native direct interpreter with profile adapter | PASS |
-| r | 0.1.0 | project Rcpp interpreter + system libxml2 | native direct profile interpreter | PASS |
-| rust | 0.1.0 | vendored schematron 0.5.1 profile patch | native direct interpreter | PASS |
-| go | 0.1.0 | Helium 0.8.0 XPath 3.1 | native direct profile interpreter | PASS |
-| python | 0.1.0 | pyschematron 1.2.1 + elementpath 5.0.4 | native direct interpreter with profile adapter | PASS |
+| java | 0.1.1 | ph-schematron-schxslt2 10.0.1 + SchXslt2 1.11.2 + Saxon-HE 12.10 | reference Schematron-to-XSLT pipeline | PASS |
+| javascript | 0.1.1 | node-schematron 2.1.0 + FontoXPath 3.34.0 | native direct interpreter with profile adapter | PASS |
+| r | 0.1.1 | project Rcpp interpreter + system libxml2 | native direct profile interpreter | PASS |
+| rust | 0.1.1 | vendored schematron 0.5.1 profile patch | native direct interpreter | PASS |
+| go | 0.1.1 | Helium 0.8.0 XPath 3.1 | native direct profile interpreter | PASS |
+| python | 0.1.1 | pyschematron 1.2.1 + elementpath 5.0.4 | native direct interpreter with profile adapter | PASS |
 
 The executable profile covers phases, namespaces, rule variables, assertions,
 diagnostics and `value-of`, nested predicate `current()`, `distinct-values()`,

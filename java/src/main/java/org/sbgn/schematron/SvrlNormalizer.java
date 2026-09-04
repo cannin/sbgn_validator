@@ -54,7 +54,7 @@ public final class SvrlNormalizer {
                     nullableAttribute(failure, "role"),
                     nullableAttribute(failure, "flag"),
                     location,
-                    nullableAttribute(failure, "test"),
+                    normalizeNullableWhitespace(nullableAttribute(failure, "test")),
                     message(failure),
                     diagnostics,
                     new DerivedIdentity(blankToNull(elementId), elementKind(location))));
@@ -89,8 +89,16 @@ public final class SvrlNormalizer {
     }
 
     private static String normalizeText(String value) {
-        String whitespace = value.replaceAll("\\s+", " ").trim();
+        String whitespace = normalizeWhitespace(value);
         return CLOCK.matcher(whitespace).replaceAll("<CURRENT_TIME>");
+    }
+
+    private static String normalizeNullableWhitespace(String value) {
+        return value == null ? null : normalizeWhitespace(value);
+    }
+
+    private static String normalizeWhitespace(String value) {
+        return value.replaceAll("\\s+", " ").trim();
     }
 
     private static String nullableAttribute(Element element, String name) {
